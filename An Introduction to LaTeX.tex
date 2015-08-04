@@ -34,6 +34,7 @@
 	\begin{praise}
 		HLETRD는 31기 선배들 중 \LaTeX 의 최고수이시다.
 	\end{praise}
+	
 \end{abstract}
 
 \clearpage
@@ -53,7 +54,19 @@
 %\renewcommand\thesection{\Roman{section}.}
 %\renewcommand\thesubsection{\arabic{subsection}.
 \pagenumbering{arabic}
-		
+
+\section{What is \LaTeX ? How to install?}
+우리는 보통 논문이나 R\&E보고서를 작성할 때 아래아한글이나 MS워드를 사용하곤 한다. 하지만 논문의 가독성 향상, 그림/표 넘버링과 간편한 리스트 작성을 위해 보통 대학원 이상에서는 \LaTeX 를 사용하곤 한다. 
+
+더욱 자세한 내용을 알고 싶다면 namu.wiki/w/LaTeX 을 읽어보길 추천한다.
+
+TeX을 사용하기 위해서는 Editor가 필요하다.
+Windows의 경우 (무료) TeXworks, TeXstudio, TeXnicCenter 등이 있다. 개인적으로는 처음 배울때 TeXworks를 사용했었으나 뒤늦게 TeXstudio의 편리함을 깨우쳤다. TeXworks는 비추.
+
+또한, 논문에 한글을 조금이라도 넣기 위해서는 kotexlive가 필요하다. www.ktug.org/xe/install 에서 다운받을 수 있다. 다만 용량이 1GB 정도이니 데이터 주의.
+
+참고로 kotexlive를 최초로 만드신 분이 경기과학고 출신이시다.ㅎㅎ 
+
 \section{making tables}
 \subsection{easy table : using \textbackslash hline}
 
@@ -365,6 +378,24 @@
 	참고로 TeXstudio에서는 \textbackslash includegraphics에서 그림 파일명에 마우스를 갖다대면 그림 미리보기가 나온다.
 \end{praise}
 \longline
+
+\section{Troubleshooter}
+\subsection{Compile Error}
+tex 문서가 컴파일되지 않는 경우에는 다음이 가능하다.
+\subsubsection{Grammar error}
+grammar error를 고쳐준다.
+특히, 수학 전용 수식 명령어가 포함되어 있는데 수식 시작부분과 끝부분에 \$를 넣지 않았다면 넣어주도록 한다. 
+\subsubsection{Can't write on file}
+Windows의 경우 OS 특성상 파일이 한 곳에서 이미 열려있을 경우 다른 곳에서 수정이 불가능하다.
+pdf파일을 닫고 다시 컴파일을 시도하도록 한다.
+
+
+\subsection{Broken text}
+\subsubsection{Ref[?]}
+reference 기능을 사용할 때 컴파일 후 pdf 파일을 확인하면 대괄호 안에 ?가 되어있을수 있다. 이는 수정된 문서를 최초로 컴파일했을때의 문제로, 컴파일을 한번 더 해주면 해결된다.
+\subsubsection{글자가 없는 경우}
+$\sim$ 와 같은 문자는 아무 생각 없이 그대로 넣어버리곤 한다. 그러면 글자가 나오지 않는다. 
+\$\verb+\+sim\$ 와 같이 넣어주도록 하자.
 
 \section{Other useful tips}
 \subsection{Using \textbackslash newcommand}
