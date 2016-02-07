@@ -11,10 +11,28 @@
 \usepackage[group-separator={,}]{siunitx} %si unit
 % \usepackage[hangul]{kotex} 이걸로하면 Abstract, Contents 등이 전부 요약, 내용 등으로 바뀜.
 
-\pagenumbering{roman} % \pagenumbering{다른거}나올때까지 roman으로 pagenumbering.
+\pagenumbering{roman} % \pagenumbering{다른거}나올때까지 roman으로 
+%pagenumbering.
 
-\renewcommand\thesection{\Roman{section}.} % \section : In roman(I,II,III,...)
-\renewcommand\thesubsection{\arabic{subsection}.} % \subsection : In arabic(1,2,3,...)
+\renewcommand\thesection{\Roman{section}} % \section : In roman(I,II,III,...)
+\renewcommand\thesubsection{\arabic{subsection}} % \subsection : In 
+%arabic(1,2,3,...)
+
+\usepackage{chngcntr}
+\renewcommand\thesubsubsection{%
+	\thesubsection.\arabic{subsubsection}%
+}
+\usepackage{titlesec}
+\titlelabel{\thetitle.\quad}
+%subsubsection에 점이 두 개씩 찍히는 것을 막고,
+%점이 문단 번호에만 찍히도록 수정.
+
+\usepackage{tocloft}%
+\setlength{\cftsecnumwidth}{3em}% 
+\setlength{\cftsubsecnumwidth}{1em}%
+\setlength{\cftsubsubsecnumwidth}{2em}%
+%toc의 여백 조정으로 VIII와 같은 번호가 제목과 겹치는 것을 방지
+
 
 \newtheorem{definition}{정의}
 \newtheorem{collorary}{보조정리}
@@ -23,8 +41,8 @@
 \begin{document}
 
 \begin{center}
-	\Large An Introduction to \LaTeX 
-	\small especially for gshs students
+	\Large An Introduction to \LaTeX
+	\small especially for GSHS students
 \end{center}
 
 \begin{abstract}
@@ -45,25 +63,31 @@
 	
 	www.ktug.org/xe/index.php?mid=install
 	
-	용량이 1GB정도 되니 주의 바람\\
+	용량이 1GB정도 되니 주의 바람
+	
+	\bigskip
 	
 	웹사이트가 개설되었습니다! 새로운 버전이 생길 때마다 자동으로 업로드됩니다. 
 	
 	\href{http://gshslatexintro.github.io/gshslatexintro/}{Download Page}
 	
-	% \\는 줄을 강제로 바꾸기 위한 것임
-	
 	\begin{praise}
 		HLETRD는 31기 선배들 중 \LaTeX 의 최고수이시다.
-		저희 32기에게 처음 \LaTeX 를 가르쳐 주시고 class 파일도 만들어주신 정민석 선생님께 감사드립니다.\\
+		저희 32기에게 처음 \LaTeX 를 가르쳐 주시고 class 파일도 
+		만들어주신 정민석 선생님께 감사드립니다.
 	\end{praise}
 	
+	\bigskip
 	
-	\textbf{우리의 기초 R\&E는 수학 R\&E가 아닌 LaTeX R\&E이었습니다.}\\
+	\textbf{우리의 기초 R\&E는 수학 R\&E가 아닌 LaTeX R\&E이었습니다.}
+	
+	\bigskip
+	
 	\begin{flushright}
 		-익명
 	\end{flushright}
 \end{abstract}
+%강제개행으로 두 줄을 띄면 overfull 경고 발생. medskip이나 bigskip 이용.
 
 \clearpage
 \tableofcontents
@@ -91,7 +115,9 @@
 TeX을 사용하기 위해서는 Editor가 필요하다.
 Windows의 경우 (무료) TeXworks, TeXstudio, TeXnicCenter 등이 있다. 개인적으로는 처음 배울때 TeXworks를 사용했었으나 뒤늦게 TeXstudio의 편리함을 깨우쳤다. TeXworks는 비추.
 
-또한, 논문에 한글을 조금이라도 넣기 위해서는 kotexlive가 필요하다. www.ktug.org/xe/install 에서 다운받을 수 있다. 다만 용량이 1GB 정도이니 데이터 주의.
+또한, 논문에 한글을 조금이라도 넣기 위해서는 kotexlive가 필요하다. 
+www.ktug.org/xe/install 에서 다운받을 수 있다. 다만 용량이 1~GB 정도이니 데이터 
+주의.
 
 참고로 kotexlive를 최초로 만드신 분이 경기과학고 출신이시다.ㅎㅎ 
 
@@ -166,7 +192,7 @@ Windows의 경우 (무료) TeXworks, TeXstudio, TeXnicCenter 등이 있다. 개�
 \verb+\+end\{table\}
 
 
-\begin{table}[h]
+\begin{table}[!h]
 	\begin{center}
 		\begin{tabular}{|c|c|c|}
 			\hline
@@ -207,7 +233,7 @@ Windows의 경우 (무료) TeXworks, TeXstudio, TeXnicCenter 등이 있다. 개�
 
 \verb+\+end\{table\}
 
-\begin{table}[h]
+\begin{table}[!h]
 	\begin{center}
 		\begin{tabular}{c|c|c}
 			\hline
@@ -248,7 +274,7 @@ Windows의 경우 (무료) TeXworks, TeXstudio, TeXnicCenter 등이 있다. 개�
 
 \verb+\+end\{table\}
 
-\begin{table}[h]
+\begin{table}[!h]
 	\begin{center}
 		\begin{tabular}{c|c|c}
 			\hline
@@ -292,7 +318,7 @@ Windows의 경우 (무료) TeXworks, TeXstudio, TeXnicCenter 등이 있다. 개�
 
 \verb+\+end\{table\}
 
-\begin{table}[h]
+\begin{table}[!h]
 	\begin{center}
 	\begin{tabular}{c|c|c}
 		\hline
@@ -344,7 +370,7 @@ Windows의 경우 (무료) TeXworks, TeXstudio, TeXnicCenter 등이 있다. 개�
 
 \verb+\+end\{table\}
 
-\begin{table}[h]
+\begin{table}[!h]
 	\begin{center}
 	\begin{tabular}{|c|c|c|}
 		\hline
@@ -547,7 +573,7 @@ koTeX의 경우 \textbackslash usepackage[hangul]\{kotex\}과 Dev-C++에서 자�
 
 \section{Appendix}
 \subsection{Fonts}
-\begin{table}[h]
+\begin{table}[!ht]
 	\begin{center}
 		\begin{tabular}{cccc}
 			\hline
@@ -571,7 +597,7 @@ koTeX의 경우 \textbackslash usepackage[hangul]\{kotex\}과 Dev-C++에서 자�
 \end{table}
 
 \subsection{Absolute Font Size in Standard Classes}
-\begin{table}[h]
+\begin{table}[!ht]
 	\begin{center}
 		\begin{tabular}{cccc}
 			\hline
