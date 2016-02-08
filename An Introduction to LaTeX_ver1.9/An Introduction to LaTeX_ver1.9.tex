@@ -309,7 +309,7 @@ documentclass가 article일 경우 숫자가 나타나지 않고 번호만 나�
 \end{displaymath}
 \end{verbatim}
 
-\subsubsection{기호}
+\subsubsection{기호} \label{section_symbol}
 \LaTeX 에서는 몇 가지 기호들이 명령어로 사용되기 때문에, \textbackslash 를 기호 
 앞에 붙여야 제대로 표시되는 문자들이 있다. 키보드에서 입력할 수 있는 문자 중 
 \textbackslash 를 필요로 하는 문자들은 다음과 같다.
@@ -427,6 +427,23 @@ pdf로 저장한 뒤 삽입하는 것이다.
 	includegraphics 옵션에서 scale=1로 지정하면 원본 크기가 됩니다.
 \end{shadequote}
 
+\paragraph{일러스트나 그래프를 넣는 기타 방법들}
+보고서를 작성하다 보면, 확대해도 깨지지 않는 벡터 형식의 그래픽으로 
+일러스트를 해야 할 때가 생긴다. 이럴 때, 아래의 방법들이 실제 현장(대학원?)
+에서 사용되는 것들이라고 한다. 
+특히, 필자의 경험에 의하면, GeoGebra를 이용하여 원하는 도형을 그리면 화면 안에
+있는 부분을 캡처하듯이 tikz code 로 내보내 주기 때문에 매우 편리하다. 
+또한, GeoGebra는 오픈소스 프리웨어이므로 학생이 사용하기 좋다.
+\begin{itemize}
+\item 	Origin
+\item 	ggplot
+\item 	matplotlib
+\item 	gnuplot
+\item 	Adobe Illustrator
+\item 	tikz
+\item 	GeoGebra : Export to tikz
+\end{itemize}
+
 \subsubsection{캡션}
 떠다니는 개체에는 캡션을 달 수 있다. 개체 내에 \verb|\caption{...}|을 쓰고 
 중괄호 안에 캡션의 내용을 넣는다. 번호는 문단 번호와 같이 자동으로 달린다.
@@ -445,11 +462,6 @@ pdf로 저장한 뒤 삽입하는 것이다.
 참조를 할 때 번호에 따라 붙어야 하는 조사가 달라지는 경우가 있다. (예 : 그림 
 2가 / 그림 3이) 이러한 경우 둘 중 아무 조사나 쓰고 앞에 \textbackslash 를 붙여 
 주면 번호에 따라 알아서 조사를 붙인다.
-
-\subsection{글자크기/색, textbf, textit}
-\subsection{Hyperlink, fancystyle}
-
-\subsection{enumerate, enumitem, 페이지 반으로 나누기}
 
 \section{논문 쓰기}
 
@@ -477,7 +489,7 @@ pdf로 저장한 뒤 삽입하는 것이다.
 \end{verbatim}
 
 
-\subsection{그래프그리기 및 gnuplot}
+
 
 \section{토론}
 이 단락에 한하여 다중 관점이 허용된다. 자유로운 의견 추가가 가능하다.
@@ -493,7 +505,70 @@ LaTeX은 적은 노력으로 미려한 조판 결과를 얻을 수 있고, 양�
 작성하는 것을 권하지 않는다. LaTeX은 편하지만 반드시 빠르지는 않다. -익명의 
 편집자
 
+우리가 흔히 사용하는 워드프로세서는 Microsoft Word, 아래아한글 한글과컴퓨터,
+ 그리고 \LaTeX 이 있다. \LaTeX 을 사용할지의 여부는 
 \section{부록}
+
+\clearpage
+\subsection{Quick Table}
+WYSIWYG 방식의 워드프로세서에서 \LaTeX 을 사용하기 시작할 때, 이 표를 따로 출력하여 들고 다닌다면 빠르게 적응할 수 있을 것이다.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|l|}
+		\hline
+		한글 & \verb+\+usepackage[hangul]\{kotex\} 가 헤더에 반드시 있어야 함.\\
+		\hline
+		italic & \verb+\+textit\{...\} 또는 \{\verb+\+it ... \} \\
+		\hline
+		bold & \verb+\+textbf\{...\} 또는 \{\verb+\+bf ...\} \\
+		\hline
+		취소선 & \verb+\+sout\{...\} \\
+		\hline
+		밑줄 & \verb+\+underline\{...\} \\
+		\hline
+		개행 & 문서 상에서의 두번 개행, 혹은 \verb+\+\verb+\+ , 혹은 \verb+\+newline \\
+		\hline
+		페이지 넘김 & \verb+\+clearpage \\
+		\hline
+		따옴표 & \ref{section_symbol} 절 참조 \\
+		\hline
+		\%, \&, \_, \{, \} & 각각 \verb+\+\%, \verb+\+\&, \verb+\+\_, \verb+\+\{, \verb+\+\} \\
+		\hline
+		\~{} & 쓰지 말자. \\
+		\hline
+		좌측정렬 & \verb+\+begin\{flushleft\} ... \verb+\+end\{flushleft\} 또는 \{\verb+\+flushleft ...\}.\\
+		\hline
+		우측정렬 & \verb+\+begin\{flushright\} ... \verb+\+end\{flushright\} 또는 \{\verb+\+flushright ...\}.\\
+		\hline
+		중앙정렬 & \verb+\+begin\{center\} ... \verb+\+end\{center\} \\
+		\hline
+		폰트크기 & 표 아래의 글 참조 \\
+		\hline
+		폰트 & (고급) \\
+		\hline
+		폰트 색 & \verb+\+usepackage\{color\} \\
+		\hline
+		각주 & \verb+\+footnote\{...\} \\
+		\hline
+		용지크기 & a4paper 등등. 고급기능이므로 생략. \\
+		\hline
+		편집용지 & (고급 기능) \\
+		\hline
+		머리말/꼬리말 & \verb+\+usepackage\{fancyhdr\}를 헤더에 넣어준 후 \verb+\+chead\{\} \verb+\+cfoot\{\} \\
+		\hline
+		페이지 절반 분할 & \verb+\+usepackage\{multicol\},  \verb+\+begin\{multicols\}\{2\} ... \verb+\+end\{multicols\} \\
+		\hline
+		줄간격 조정 & \verb+\+linewidth[...] \\
+		\hline
+		들여쓰기 조정 & \verb+\+usepackage\{indentfirst\} 등 \\
+		\hline
+	\end{tabular}
+	\caption{Quick conversion table}
+	\label{Quick_table}
+\end{table}
+{\tiny \verb+\+tiny} {\scriptsize \verb+\+scriptsize} {\footnotesize \verb+\+footnotesize} {\small \verb+\+small} {\normalsize \verb+\+normalsize} {\large \verb+\+large} {\Large \verb+\+Large} {\LARGE \verb+\+LARGE} {\huge \verb+\+huge} {\Huge \verb+\+Huge}
+\end{document}
 
 \tableofcontents
 \listoffigures
