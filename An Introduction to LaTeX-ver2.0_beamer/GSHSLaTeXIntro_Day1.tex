@@ -10,6 +10,8 @@
 \usepackage[per-mode=symbol]{siunitx}
 \sisetup{inter-unit-product =$\cdot$}
 \usepackage{color}
+\usepackage{ulem}
+\usepackage{amsmath,amssymb}
 \graphicspath{{images/}}
 \title[\LaTeX - Day 1]{\LaTeX 입문 - Day 1}
 
@@ -79,10 +81,10 @@
 		\item \TeX 스터디(?)가 초기 목적 - gshslatexintro
 		\item R\&E, 졸업논문 등의 tex, cls 파일을 수정 및 보완하는 \TeX 사용자 협회로 발전
 	\end{itemize}
-	\url{http://gshslatexintro.github.io} \footnote{\url{http://gshs.github.io}로도 들어올 수 있다.}
+	\url{http://gshslatexintro.github.io} \footnote{현재 \url{chanspi.ddns.net/gshs/LaTeX}으로 리다이렉트됨.}
 	\begin{itemize}
 		\item 각종 양식 및 입문서, 예시 제공.
-		\item 곧 송죽학사에 관련 탭이 개설될 예정.
+		\item \sout{곧 송죽학사에 관련 탭이 개설될 예정.}
 	\end{itemize}
 \end{frame}
 \subsection{\TeX 문서 구조}
@@ -242,9 +244,11 @@
 \section{부록}
 \subsection{여러 수식 환경들}
 \begin{frame}{equation / equation*}
-	equation 환경을 쓰되, 번호를 매기고 싶지 않을 경우 사용한다. 이 방법 외에도, 그냥 \$\$ ... \$\$ 를 사용하거나, 등식 맨 뒤에 \textbackslash notag 를 붙여도 된다. 코드 : \footnote{\url{http://pastebin.com/vsxT1MrY} }
+	equation 환경을 쓰되, 번호를 매기고 싶지 않을 경우 사용한다. 
+	이 방법 외에도, 그냥 \$\$ ... \$\$ 를 사용하거나,
+	등식 맨 뒤에 \textbackslash notag 를 붙여도 된다. 코드 : \footnote{\url{http://pastebin.com/vsxT1MrY}}
 	\begin{equation*}
-	k = \SI{8.987e9}{\newton\square\meter\per\square\coulomb}
+		\mathcal{L} \equiv T-V
 	\end{equation*}
 	통상적으로 \TeX 에서는 equation* 외에도 *를 붙이면 번호가 매겨지지 않는다. 뒤에 설명할 align, gather 등도 align*, gather* 환경이 존재하며, section 과 같은 것도 section* 가 존재.
 \end{frame}
