@@ -1,22 +1,25 @@
 # LaTeX 설치 가이드 (Windows)
 ## 인터넷 환경이 좋을 경우
-- [여기](https://www.tug.org/texlive/acquire-netinstall.html)에 들어가서서 `install-tl-windows.exe` 를 다운받는다.
+- [여기](https://www.tug.org/texlive/acquire-netinstall.html)에 들어가서 `install-tl-windows.exe` 를 다운받는다.
 - 실행(더블클릭)한다.
 - 설치가 완료될 때까지 기다린다.
 
-하지만 이 방법은 다운과 설치를 같이 하기 때문에 경우에 따라서는 매우 오래걸릴 수 있다. (>1시간)
+하지만 이 방법은 다운과 설치를 같이 하기 때문에 경우에 따라서는 매우 오래걸릴 수 있다. (>2시간)
 
 ## 인터넷 환경이 나쁘거나 없을 경우
 - [여기](https://www.tug.org/texlive/acquire-iso.html)에서 `texlive2016.iso.torrent` 를 다운받는다.
 - (시간 따로 내어서 인터넷 잘되는 곳에 간 뒤) 토렌트를 통해 iso 파일(약 2GB)을 얻는다.
 - 이 iso 파일은 우리학교 **학습관 컴퓨터 바탕화면**에 있기도 하다.
 - iso 파일을 압축해제한 뒤 `install-tl-windows.bat` 를 찾아 실행(더블클릭)한다.
-- 설치가 완료될 때까지 기다린다. 
+- 설치가 완료될 때까지 기다린다. (약 50분 소요)
 
 # 에디터(문서 편집기)
 ## TeXstudio
 - **강력추천**. Windows, macOS에서 모두 사용가능.
 - [TeXstudio](http://texstudio.org/) 를 다운받고 설치한다.
+
+### TeXstudio 에서 TeXlive 설치여부 확인하기
+Help - Check LaTeX Installation
 
 ## TeXworks
 - 기본으로 설치된다.
