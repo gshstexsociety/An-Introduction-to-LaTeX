@@ -13,6 +13,7 @@
 \usepackage{ulem}
 \usepackage{amsmath,amssymb}
 \graphicspath{{images/}}
+\usepackage{verbatim}
 \title[\LaTeX - Day 1]{\LaTeX 입문 - Day 1}
 
 \author{14041 박승원}
@@ -72,7 +73,8 @@
 	\TeX 문서 편집기
 	\begin{itemize}
 		\item TeXLive에서 기본 제공 : TeXWorks / TeXshop
-		\item 하지만 TeXStudio\footnote{texstudio.org}가 훠---얼씬 편하다!
+		\item 하지만 TeXstudio\footnote{texstudio.org}가 훠---얼씬 
+		편하다!
 	\end{itemize}
 \end{frame}
 \begin{frame}{GSHS TeX Society}
@@ -132,75 +134,96 @@
 \end{frame}
 \section{\TeX 과 친해지기}
 \subsection{수식 입력}
-\begin{frame}{`mathmode'}
+\begin{frame}[fragile]{`mathmode'}
+	수식 입력을 위해서는 amsmath 패키지를 불러야 한다.
 	\begin{enumerate}
-		\item \$ ... \$ : 수식 \\
-		$e^{i\pi}+1=0$
-		\item \$\$ ... \$\$ : 가운데 정렬된 수식
-		$$e^{i\pi}+1=0$$
-		\item \textbackslash begin\{equation\} ... \textbackslash end\{equation\} : 번호가 매겨진 수식\footnote{equation 환경 외에도 여럿 있음. 부록 참조 바람.}
+		\item \verb|\( ... \)| : 행 내 수식 \\
+		\( e^{i\pi}+1=0 \)
+		\item \verb|\[ ... \]| : 번호 없는 표시형 수식
+		\[ e^{i\pi}+1=0 \]
+		\item \verb|\begin{equation} ... \end{equation}|
+		: 번호 있는 표시형 수식
+		\footnote{equation 환경 외에도 여럿 있음. 부록 참조 바람.}
 		\begin{equation}
-		e^{i\pi}+1=0
+			e^{i\pi}+1=0
 		\end{equation}
 	\end{enumerate}
 	수식에 붙은 번호를 referencing 할 수 있는데, 이건 다음 시간에...
 \end{frame}
-\begin{frame}{수식 문법}
-	TeXStudio의 왼쪽 바에서 전부 찾아볼 수 있다.
+\begin{frame}[fragile]{수식 문법}
+	TeXstudio의 왼쪽 바에서 전부 찾아볼 수 있다.
 	\begin{itemize}
-		\item \textbackslash sin\{...\}, \textbackslash log\{...\} : 삼각함수, 로그함수는 기울여 쓰면 안되므로 이렇게 써야 한다.
-		\item \textbackslash frac\{(num)\}\{(den)\} : 분자 num, 분모 den 인 분수
-		\item \textbackslash sqrt [n]\{x\} : $x$의 $n$제곱근
-		\item \textbackslash sum\_\{i=1\}\textasciicircum{n}\{...\} : 시그마 합 표기법.
-		\item \textbackslash begin \{cases\} ... \textbackslash end\{cases\} : 중괄호로 경우 나누기
+		\item \verb|\sin{ ... }|, \verb|\log{ ... }|
+		: 삼각함수, 로그함수는 기울여 쓰면 안되므로 이렇게 써야 한다.
+		\item \verb|\frac{num}{den}|
+		: 분자 num, 분모 den인 분수
+		\item \verb|\sqrt[n]{x}|
+		: $x$의 $n$제곱근
+		\item \verb|\sum_{i = 1}^{n}{ ... }|
+		: 시그마 합 표기법.
+		\item \verb|\begin{cases} ... \end{cases}|
+		: 중괄호로 경우 나누기
 	\end{itemize}
 	용례는 다음 페이지 참조. {\footnotesize (대괄호와 중괄호 구분에 유의!)}
 \end{frame}
 \begin{frame}{수식 용례}
 	코드 : \footnote{\url{http://pastebin.com/Qt1MVcSb}}
-	$$ \sin{\pi} = 0 $$
-	$$ \log_{2}{8} = 3 $$
-	$$ \frac{6}{3} = 2 $$
-	$$ \sqrt[3]{8} = 2 $$
-	$$ \sum_{i=1}^{n}{1} = n $$
+	\[ \sin{\pi} = 0 \]
+	\[ \log_{2}{8} = 3 \]
+	\[ \frac{6}{3} = 2 \]
+	\[ \sqrt[3]{8} = 2 \]
+	\[ \sum_{i=1}^{n}{1} = n \]
 	\begin{equation}
-	f(n) = \begin{cases} 0 &\mbox{if } n<0 \\ 
-	1 & \mbox{if } n\geq 1 \end{cases}
+		f(n) =
+		\begin{cases}
+			0 & \text{if}\ n < 0 \\ 
+			1 & \text{if}\ n \geq 1
+		\end{cases}
 	\end{equation}
 \end{frame}
 \subsection{워드프로세서 기본사항}
-\begin{frame}{특수문자}
+\begin{frame}[fragile]{특수문자}
 	\TeX 에서 바로 사용할 수 없는 문자 : 
 	\begin{center}
-		\textbackslash, \#, \$, \%, \&, \{, \}, \_ \textasciitilde, \textasciicircum
+		\textbackslash, \#, \$, \%, \&, \{, \}, \_, \textasciitilde, 
+		\textasciicircum
 	\end{center}
 	다음과 같이, 대부분의 경우 단순히 backslash를 붙여주면 된다.
-	\begin{center}
-		\textbackslash textbackslash, \textbackslash\#, \textbackslash\$, \textbackslash\%, \textbackslash\&, \textbackslash\{, \textbackslash\}, \textbackslash \_ , \textbackslash textasciitilde, \textbackslash textasciicircum 
-	\end{center}
+	\begin{verbatim}
+		\textbackslash, \#, \$, \%, \&, \{, \}, \_,
+		\textasciitilde, \textasciicircum
+	\end{verbatim}
 	Tip : \% 는 코드의 주석 처리를 위해 사용된다. 여러 줄 주석처리는 여기\footnote{\url{http://tex.stackexchange.com/questions/17816/commenting-out-large-sections}} 를 참조
 \end{frame}
-\begin{frame}{띄어쓰기, 개행}
+\begin{frame}[fragile]{띄어쓰기, 개행}
 	\begin{itemize}
-		\item \TeX 코드에서 띄어쓰기를 아무리 많이 해도 결과물에서는 띄어쓰기가 한번만 된다. \\
-		`\textasciitilde' 를 사용하여 이~~~~렇게 띄울 수 있다.
-		\item 보통 개행을 위해서는 \textbackslash\textbackslash 가 자주 이용된다. 단순히 2회 개행해 놓아도 된다.
-		\item \TeX 코드에서 한번 개행한 것으로는 결과물에서는 개행되지 않는다. 2회 개행해야 한다. \\
+		\item \TeX 코드에서 띄어쓰기를 아무리 많이 해도 결과물에서는 
+		띄어쓰기가 한번만 된다. \\
+		여러 번의 띄어쓰기를 위해서는 `\verb|\ |'를 쓰면 된다.
+		가령 띄어쓰기를 3번 더 하고 싶다면 \verb|이 \ \ \ 렇게| 하면
+		이 \ \ \ 렇게 나온다.
+		\footnote{\LaTeX 의 기본 띄어쓰기 폭은 한글 글자의 3분의 1이다.}
+		\item 개행을 하려면 줄 끝에 \verb|\\|를 쓴다.
+		\item \TeX 코드에서 한번 개행한 것으로는 결과물에서는 개행되지 
+		않는다. 2회 개행하면 새로운 문단을 시작한다. \\
 		사실 이 덕분에 문장 수정하기가 훨씬 좋아진다. 
 	\end{itemize}
-	여백을 만들어야 할 경우 \textbackslash vfill, \textbackslash vspace\{2cm\} 등을 사용 가능.
+	여백을 만들어야 할 경우 \verb|\vfill, \vspace{2cm}| 등을 사용 가능.
 	
 \end{frame}
-\begin{frame}{각주, 들여쓰기}
-	각주는 단순히 \textbackslash \{...\} 와 같이 사용하면 된다. 단, 표에서 사용할 경우 문제가 발생할 수 있다.
+\begin{frame}[fragile]{각주, 들여쓰기}
+	각주는 단순히 \verb|\{ ...}| 와 같이 사용하면 된다. 단, 표에서 사용할 
+	경우 문제가 발생할 수 있다.
 	\vspace{1cm}
 	
-	(기본적으로 조정이 되지만, 처음에 익숙하지 않을 때는 단순히 \textbackslash indent, \textbackslash noindent 로 강제 조정할 수 있다.)
+	(기본적으로 조정이 되지만, 처음에 익숙하지 않을 때는 단순히 
+	\verb|\indent|, \verb|\noindent|로 강제 조정할 수 있다.)
 	
-	2회 개행으로 개행했을 경우 들여쓰기가 되고, \textbackslash\textbackslash 로 개행했을 경우 들여쓰기가 없다. 
+	2회 개행은 문단 나눔이기 때문에 들여쓰기가 되지만, \verb|\\|로 
+	개행하면 들여쓰기가 없다. 
 	
 \end{frame}
-\begin{frame}{좌측/우측/중앙 정렬}
+\begin{frame}[fragile]{좌측/우측/중앙 정렬}
 	\begin{flushleft}
 		좌측 정렬
 	\end{flushleft}
@@ -212,25 +235,30 @@
 	\end{center}
 	각각 flushleft, flushright, center 환경을 사용하면 된다.
 	
-	예시 : \textbackslash begin\{center\} 텍스트	\textbackslash end\{center\}
+	예시 : \verb|\begin{center} 텍스트 \end{center}|
 \end{frame}
-\begin{frame}{페이지 넘김 및 편집용지}
+\begin{frame}[fragile]{페이지 넘김 및 편집용지}
 	
-	페이지 넘김은 \textbackslash newpage 또는 \textbackslash clearpage 를 사용. 책을 만들 경우 \textbackslash cleardoublepage
+	페이지 넘김은 \verb|\newpage| 또는 \verb|\clearpage| 를 사용. 
+	책을 만들 경우 \verb|\cleardoublepage|
 	\vspace{0.7cm}
 	
 	편집용지는 geometry 패키지를 참조하라. 
 	
-	\textbackslash usepackage[left=25mm,right=25mm,top=30mm,
-	
-	bottom=30mm]\{geometry\}
+	\begin{verbatim}
+		\usepackage[left=25mm,right=25mm,top=30mm,
+			bottom=30mm]{geometry}
+	\end{verbatim}
 \end{frame}
-\begin{frame}{글꼴 조정}
+\begin{frame}[fragile]{글꼴 조정}
 	\begin{itemize}
-		\item \textbf{굵게} : \textbackslash textbf\{...\}
-		\item \textit{이태릭} : \textbackslash textit\{...\}
-		\item \textsf{산세리프}\footnote{본 문서는 beamer class 를 사용하기 때문에 기본 폰트가 산세리프이다. 한글의 경우 나눔고딕.} : \textbackslash textsf\{...\}
-		\item {\color{blue} 색상} : color package 를 사용, \{ \textbackslash color \{blue\} ... \}
+		\item \textbf{굵게} : \verb|\textbf{ ... }|
+		\item \textit{이탤릭} : \verb|\textit{ ... }|
+		\item \textsf{산세리프}\footnote{본 문서는 beamer class 를 
+		사용하기 때문에 기본 폰트가 산세리프이다. 한글의 경우 
+		나눔고딕.} : \verb|\textsf{ ... }|
+		\item {\color{blue} 색상} : color 패키지를 사용,
+		\verb|{\color{blue} ... }|
 	\end{itemize}
 	kotexlive 2013 기준으로, \TeX 의 기본 한글글꼴은 네이버에서 배포한 나눔명조 및 나눔고딕이다. 영어 기본 글꼴은 `Computer Modern' 이고, 필요할 경우 해당 package 를 사용하여 Times New Roman 을 사용할 수 있다. 사용방법 : \footnote{\url{http://pastebin.com/fZphiXGT}}
 \end{frame}
@@ -250,20 +278,22 @@
 \end{frame}
 \section{부록}
 \subsection{여러 수식 환경들}
-\begin{frame}{equation / equation*}
-	equation 환경을 쓰되, 번호를 매기고 싶지 않을 경우 사용한다. 
-	이 방법 외에도, 그냥 \$\$ ... \$\$ 를 사용하거나,
-	등식 맨 뒤에 \textbackslash notag 를 붙여도 된다. 코드 : \footnote{\url{http://pastebin.com/vsxT1MrY}}
+\begin{frame}[fragile]{equation / equation*}
+	equation 환경을 쓰되, 번호를 매기고 싶지 않을 경우 equation*을 
+	사용한다. 
+	이 방법 외에도, 그냥 \verb|\[ ... \]|을 사용하거나,
+	등식 맨 뒤에 \verb|\nonumber|를 붙여도 된다. 코드 : 
+	\footnote{\url{http://pastebin.com/vsxT1MrY}}
 	\begin{equation*}
 		\mathcal{L} \equiv T-V
 	\end{equation*}
 	통상적으로 \TeX 에서는 equation* 외에도 *를 붙이면 번호가 매겨지지 않는다. 뒤에 설명할 align, gather 등도 align*, gather* 환경이 존재하며, section 과 같은 것도 section* 가 존재.
 \end{frame}
-\begin{frame}{검색하면 다 나온다!}
+\begin{frame}[fragile]{검색하면 다 나온다!}
 	\begin{itemize}
 		\item align, aligned, gather, ... 다양한 수식 환경
-		\item 괄호 크기 자동조정 : \textbackslash left( ... \textbackslash right)
-		\item 수식의 태그 임의로 변경하기 : \textbackslash tag\{...\}
+		\item 괄호 크기 자동조정 : \verb|\left( ... \right)|
+		\item 수식의 태그 임의로 변경하기 : \verb|\tag{ ... }|
 	\end{itemize}
 	Tip : 품위있는(?) 논문에서는, 중요한 수식들은 모두 온점(.) 으로 마무리한다.
 \end{frame}
