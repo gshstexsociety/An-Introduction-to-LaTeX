@@ -16,12 +16,8 @@
 \usepackage{verbatim}
 \title[\LaTeX - Day 1]{\LaTeX 입문 - Day 1}
 
-\author{14041 박승원}
-\institute[GSHS]
-{과학영재학교 경기과학고등학교 \TeX 사용자협회 \\ 
-	\medskip
-	psw14041@gmail.com (@seungwonpark GitHub)
-}
+\author{경기과학고 \TeX 사용자협회}
+\institute[GSHSTeXSociety]{\url{gshslatexintro.github.io}}
 \date{마지막 수정일 : \today}
 
 
@@ -167,7 +163,7 @@
 	용례는 다음 페이지 참조. {\footnotesize (대괄호와 중괄호 구분에 유의!)}
 \end{frame}
 \begin{frame}{수식 용례}
-	코드 : \footnote{\url{http://pastebin.com/Qt1MVcSb}}
+	코드 : \footnote{\url{http://pastebin.com/iJ8AJ8L1}}
 	\[ \sin{\pi} = 0 \]
 	\[ \log_{2}{8} = 3 \]
 	\[ \frac{6}{3} = 2 \]
@@ -195,7 +191,7 @@
 	\end{verbatim}
 	Tip : \% 는 코드의 주석 처리를 위해 사용된다. 여러 줄 주석처리는 여기\footnote{\url{http://tex.stackexchange.com/questions/17816/commenting-out-large-sections}} 를 참조
 \end{frame}
-\begin{frame}[fragile]{띄어쓰기, 개행}
+\begin{frame}[fragile]{띄어쓰기}
 	\begin{itemize}
 		\item \TeX 코드에서 띄어쓰기를 아무리 많이 해도 결과물에서는 
 		띄어쓰기가 한번만 된다. \\
@@ -203,16 +199,20 @@
 		가령 띄어쓰기를 3번 더 하고 싶다면 \verb|이 \ \ \ 렇게| 하면
 		이 \ \ \ 렇게 나온다.
 		\footnote{\LaTeX 의 기본 띄어쓰기 폭은 한글 글자의 3분의 1이다.}
+	\end{itemize}
+	여백을 만들어야 할 경우 \verb|\vfill, \vspace{2cm}| 등을 사용 가능.
+\end{frame}
+\begin{frame}[fragile]{개행}
+	\begin{itemize}
 		\item 개행을 하려면 줄 끝에 \verb|\\|를 쓴다.
 		\item \TeX 코드에서 한번 개행한 것으로는 결과물에서는 개행되지 
 		않는다. 2회 개행하면 새로운 문단을 시작한다. \\
 		사실 이 덕분에 문장 수정하기가 훨씬 좋아진다. 
 	\end{itemize}
-	여백을 만들어야 할 경우 \verb|\vfill, \vspace{2cm}| 등을 사용 가능.
-	
+	다양한 개행 방법은 여기\footnote{\url{http://tex.stackexchange.com/questions/74353/what-commands-are-there-for-horizontal-spacing}}를 참조 바람.
 \end{frame}
 \begin{frame}[fragile]{각주, 들여쓰기}
-	각주는 단순히 \verb|\{ ...}| 와 같이 사용하면 된다. 단, 표에서 사용할 
+	각주는 단순히 \verb|\footnote{ ...}| 와 같이 사용하면 된다. 단, 표에서 사용할 
 	경우 문제가 발생할 수 있다.
 	\vspace{1cm}
 	
@@ -283,7 +283,7 @@
 	사용한다. 
 	이 방법 외에도, 그냥 \verb|\[ ... \]|을 사용하거나,
 	등식 맨 뒤에 \verb|\nonumber|를 붙여도 된다. 코드 : 
-	\footnote{\url{http://pastebin.com/vsxT1MrY}}
+	\footnote{\url{http://pastebin.com/Ywaz4pA7}}
 	\begin{equation*}
 		\mathcal{L} \equiv T-V
 	\end{equation*}
