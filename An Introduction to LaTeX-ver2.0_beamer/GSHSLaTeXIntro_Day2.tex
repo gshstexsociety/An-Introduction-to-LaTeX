@@ -23,6 +23,8 @@ psw14041@gmail.com (@seungwonpark GitHub)
 }
 \date{마지막 수정일 : \today}
 
+%\setbeamertemplate{navigation symbols}{}%to suppress navigation tools
+
 \AtBeginSection[]{
 	\begin{frame}
 		\vfill
@@ -133,13 +135,15 @@ psw14041@gmail.com (@seungwonpark GitHub)
 			\hline
 			b & 개체를 페이지의 맨 아래쪽(\textbf{b}ottom)에 놓음 \\
 			\hline
-			p & 개체를 특정 페이지(\textbf{p}age)에 놓음. 별다른  설정이 없으면 문서의 맨 뒤. \\
+			p & 개체를 특정 페이지(\textbf{p}age)에 놓음. 별다른 설정이 없으면 문서의 맨 뒤. \\
+			\hline
+			! & \LaTeX 에서 미리 설정해놓은 일부 서식을 무시하고(ex. 텍스트 여백) 놓음\\
 			\hline
 		\end{tabular}
 	\end{table}
 \end{frame}
 \begin{frame}{h,t,b,p 옵션}
-	보통의 워드프로세서를 사용하던 것처럼 하려면 단순히 h를 사용하면 된다. 하지만 때로는 h가 불가능하기 때문에, 이미지가 페이지 경계를 넘어간다든지 하는 일을 막으려면 htbp와 같이 차선책을 두어 주는 것이 좋다.
+	보통의 워드프로세서를 사용하던 것처럼 하려면 단순히 h를 사용하면 된다. 하지만 때로는 h가 불가능하기 때문에, 이미지가 페이지 경계를 넘어간다든지 하는 일을 막으려면 htbp와 같이 차선책을 두어 주는 것이 좋다. tpbh 등으로 설정해도 htbp 순으로 적용된다.
 	
 	또한, 대부분의 학술지는 두 단으로 나누어진 양식을 채택하는데, 이 경우 그림을 페이지의 중간에 놓는 것보다는 맨 위에 두고, 맨 위에 둘 수 없다면 맨 아래에 두는 것이 좋다. 다음 두 페이지의 예시를 보자.
 \end{frame}
@@ -157,6 +161,11 @@ psw14041@gmail.com (@seungwonpark GitHub)
 		\centering
 		\includegraphics[width=.9\textwidth]{wrong_fig_v2.png}
 	\end{figure}
+\end{frame}
+\begin{frame}{정확한 위치에 놓기}
+	다만 때에 따라서는 그림을 정확한 위치에 놓아야 할 때가 있다.
+	
+	그럴 때는 `float' package의 H 옵션을 사용하자. figure 환경에서 htbp 대신 H를 사용하면 된다.
 \end{frame}
 \begin{frame}{그림의 유형}
 	삽입할 그림의 유형에 대해 적합한 이미지 형식은 다음과 같다.
