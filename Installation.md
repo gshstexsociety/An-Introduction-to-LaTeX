@@ -1,4 +1,4 @@
-# LaTeX 설치 가이드 (Windows)
+﻿# LaTeX 설치 가이드 (Windows)
 ## 인터넷 환경이 좋을 경우
 - [여기](https://www.tug.org/texlive/acquire-netinstall.html)에 들어가서 `install-tl-windows.exe` 를 다운받는다.
 - 실행(더블클릭)한다.
@@ -48,7 +48,7 @@ Hello World!
  
 ## 연습
 ### 입문서
-- 경기과학고 텍 사용자협회 제공 : ver2.0 입문서([Day0](http://chanspi.ddns.net/gshs/LaTeX_Files//An-Introduction-to-LaTeX/An%20Introduction%20to%20LaTeX-ver2.0_beamer/GSHSLaTeXIntro_Day0.pdf), [Day1](http://chanspi.ddns.net/gshs/LaTeX_Files//An-Introduction-to-LaTeX/An%20Introduction%20to%20LaTeX-ver2.0_beamer/GSHSLaTeXIntro_Day1.pdf), [Day2](http://chanspi.ddns.net/gshs/LaTeX_Files//An-Introduction-to-LaTeX/An%20Introduction%20to%20LaTeX-ver2.0_beamer/GSHSLaTeXIntro_Day2.pdf))
+- 경기과학고 텍 사용자협회 제공 : ver2.0 입문서([Day0](http://latex.gs.hs.kr/files/An-Introduction-to-LaTeX/An%20Introduction%20to%20LaTeX-ver2.0_beamer/GSHSLaTeXIntro_Day0.pdf), [Day1](http://latex.gs.hs.kr/files/An-Introduction-to-LaTeX/An%20Introduction%20to%20LaTeX-ver2.0_beamer/GSHSLaTeXIntro_Day1.pdf), [Day2](http://latex.gs.hs.kr/files/An-Introduction-to-LaTeX/An%20Introduction%20to%20LaTeX-ver2.0_beamer/GSHSLaTeXIntro_Day2.pdf))
 - 잘 알려진 입문서로는 [142분동안 익히는 LaTeX](http://texdoc.net/texmf-dist/doc/latex/lshort-korean/lshort-kr.pdf)이 있다.
 
 ### 각 코드의 의미 알아내기
