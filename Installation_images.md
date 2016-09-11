@@ -29,25 +29,40 @@
 ###설치과정
 - 'install-tl-windows.exe'를 더블클릭해 실행
 - simple install 선택 후 next
+
 <img src=./latex_2016_install/setup_latex8.png width=300px>
+
 - install을 클릭하면 되겠죠?
+
 <img src=./latex_2016_install/setup_latex9.png width=300px>
+
 - 그럼 뭔가 압축을 풀고 설치되는거 같이 보임.
+
 <img src=./latex_2016_install/setup_latex10.png width=300px>
+
 - 하지만 진짜 설치는 지금부터 ^^ 'next'를 클릭
+
 <img src=./latex_2016_install/setup_latex11.png width=300px>
 - 그럼 다음의 과정들이 쭈욱~ 진행됨
+
 <img src=./latex_2016_install/setup_latex12.png width=300px>
+
 <img src=./latex_2016_install/setup_latex13.png width=300px>
+
 * 응답없음이 뜨더라도 당황하지 말고 기다림
 - 기다리면 뜸. 설치 디렉토리는 바꾸지 말고 그냥 'next'
+
 <img src=./latex_2016_install/setup_latex27.png width=300px>
 - 기본 paper size : a4 등 모두 체크하고 'next'
+
 <img src=./latex_2016_install/setup_latex28.png width=300px>
 - 설치 전 최종 확인. 이상없으면 그냥 'install'
+
 <img src=./latex_2016_install/setup_latex30.png width=300px>
 - 설치는 쭈욱 계속 됨
+
 <img src=./latex_2016_install/setup_latex33.png width=300px>
+
 <img src=./latex_2016_install/setup_latex34.png width=300px>
 - 끝났으니까 'finish'
 - 여기까지 오는데 빠르면 1시간.. 늦으면..... 2시간 이상 걸림 
