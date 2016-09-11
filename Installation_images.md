@@ -15,6 +15,49 @@
 - 설치가 완료될 때까지 기다린다. (약 50분 소요)
 - 참고 : 설치가 진행되는 중 설치하고 있는 창을 클릭하면 '응답 없음'이 뜰 수도 있다. 웬만하면 설치 중에는 컴퓨터를 아예 건드리지 말자.
 
+## iso 직접 다운로드 하기
+- [여기](http://goo.gl/OVeyx0)에서 'texlive2016-20160523.iso'을 직접 다운로드 한다. 
+- 그리고 iso 파일을 압축해제한 뒤 위와 같이 한다.
+- 교내망에서는 이렇게 다운로드 하면 조금 편할거 같다.
+
+##Latex 2016 설치하기
+###환경
+- windows 10 64비트임
+- Latex 2016버전 설치 과정
+- 'install-tl-windows.exe'를 다운로드 한 후, 인터넷 좋은 곳에서 설치하는 상황임
+
+###설치과정
+- 'install-tl-windows.exe'를 더블클릭해 실행
+- simple install 선택 후 next
+<img src=./latex_2016_install/setup_latex8.png width=300px>
+- install을 클릭하면 되겠죠?
+<img src=./latex_2016_install/setup_latex9.png width=300px>
+- 그럼 뭔가 압축을 풀고 설치되는거 같이 보임.
+<img src=./latex_2016_install/setup_latex10.png width=300px>
+- 하지만 진짜 설치는 지금부터 ^^ 'next'를 클릭
+<img src=./latex_2016_install/setup_latex11.png width=300px>
+- 그럼 다음의 과정들이 쭈욱~ 진행됨
+<img src=./latex_2016_install/setup_latex12.png width=300px>
+<img src=./latex_2016_install/setup_latex13.png width=300px>
+* 응답없음이 뜨더라도 당황하지 말고 기다림
+- 기다리면 뜸. 설치 디렉토리는 바꾸지 말고 그냥 'next'
+<img src=./latex_2016_install/setup_latex27.png width=300px>
+- 기본 paper size : a4 등 모두 체크하고 'next'
+<img src=./latex_2016_install/setup_latex28.png width=300px>
+- 설치 전 최종 확인. 이상없으면 그냥 'install'
+<img src=./latex_2016_install/setup_latex30.png width=300px>
+- 설치는 쭈욱 계속 됨
+<img src=./latex_2016_install/setup_latex33.png width=300px>
+<img src=./latex_2016_install/setup_latex34.png width=300px>
+- 끝났으니까 'finish'
+- 여기까지 오는데 빠르면 1시간.. 늦으면..... 2시간 이상 걸림 
+
+- iso파일로 설치하면 1시간 이내로 끝난다고 함.
+
+###설치된거 확인하기
+- 작성중...
+
+
 # 에디터(문서 편집기)
 ## TeXstudio
 - **강력추천**. Windows, macOS에서 모두 사용가능.
