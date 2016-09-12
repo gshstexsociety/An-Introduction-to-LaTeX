@@ -70,8 +70,28 @@
 - iso파일로 설치하면 1시간 이내로 끝난다고 함.
 
 ###설치된거 확인하기
-- 작성중...
+- 설치가 완료되었으면 한번 tex으로 'hi wool'을 출력(?) 해보자
+- 프로그램 목록에 들어가면 tex live 2016이 설치된게 보인다. 그 중 'TexWorks Editor'를 실행
 
+<img src=./latex_2016_install/setup_latex36.png width=300px>
+
+- 에디터에 다음을 입력한다.
+
+<pre>
+\documentclass{article}
+\begin{document}
+Hello World!
+\end{document}
+</pre>
+
+<img src=./latex_2016_install/setup_latex40_1.png width=300px>
+
+- 그리고 상단 메뉴에 녹색의 재생표시를 클릭하거나 'ctrl+T'을 입력해 조판하면 짜잔~! 뜬다.
+
+<img src=./latex_2016_install/setup_latex40_2.png width=300px>
+
+
+그럼 끝!!!! Tex live 2016 설치 끝!!
 
 # 에디터(문서 편집기)
 ## TeXstudio
@@ -113,3 +133,6 @@ Hello World!
 - [경기과학고 TeX 사용자협회](http://latex.gs.hs.kr)에서 '예시' 또는 '양식' 다운로드.
 - tex 파일들 열고 컴파일해보면서 결과물을 확인하고, 코드를 줄 단위로 과감히 **바꿔보면서**(삭제, 복사, 수 바꾸기 등) 컴파일하고 결과물이 어떻게 바뀌었는지 보며 각 줄의 코드가 갖는 의미를 알아보자.
 - 코드와 View(F7)을 같이 띄운 상태에서는 코드의 특정 부분을 우클릭한 후 `Go to PDF` 하면 pdf에서 해당 파트가, pdf에서 특정 부분을 우클릭한 후 `Go to Source` 하면 코드에서 해당 파트가 잠시 연노란색으로 강조된다.
+
+
+### 32기 박승원이 작성한 글에 추가함.
