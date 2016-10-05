@@ -1,0 +1,94 @@
+\documentclass[11pt]{article}
+\usepackage[left=25mm,right=25mm,top=20mm,bottom=10mm]{geometry}
+\usepackage{amsmath} % math
+\usepackage{amssymb} % math
+\usepackage{graphicx} % to use \includegraphics{}
+\usepackage{diagbox} % to make tables
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{kotex}
+\usepackage{color}
+\usepackage[hidelinks]{hyperref}
+\usepackage[per-mode=symbol]{siunitx}
+\sisetup{inter-unit-product =$\cdot$} % http://tex.stackexchange.com/questions/59032/how-to-format-si-units
+%\graphicspath{{images/}}
+\begin{document}
+	\begin{center}
+		\Large  \LaTeX{} 주요 명령어 Cheat Sheet
+	\end{center}
+	\begin{flushright}
+		by 경기과학고등학교 32기 박승원 (\today)
+	\end{flushright}
+	아래의 표는 한컴오피스 또는 MS Word를 쓰던 사람이 \LaTeX 에 적응하기 위한 명령어의 모음이다.
+	이 외에도 \LaTeX 에는 \verb+\+tableofcontents, \verb+\+section 등의 수많은 유용한 명령어들이 있으니 더 찾아보며 배우기를 바란다.
+	
+	\renewcommand{\arraystretch}{1.2}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|p{.2\textwidth}|p{.8\textwidth}|}
+		\hline
+		영어 / 숫자 & 영어 / 아라비아 숫자 그대로. \\
+		\hline
+		한글 & \verb+\+usepackage\{kotex\} 입력 후 사용 \\
+		\hline
+		italic / bold & \verb+\+textit\{...\} 또는 \{\verb+\+it ... \} / \verb+\+textbf\{...\} 또는 \{\verb+\+bf ...\}. \\
+		\hline
+		밑줄 / 취소선 & \verb+\+underline\{...\}, \verb+\+usepackage\{ulem\} 입력 후 \verb+\+sout\{...\}. \\
+		\hline
+		개행 & 두번 개행 혹은 \verb+\+\verb+\+ 혹은 \verb+\+newline. \\
+		\hline
+		따옴표 & `(키보드의 Esc 밑에 있는 backtick)으로 열고, '(평소에 쓰던 apostrophe)로 닫음. 큰따옴표는 두개 사용. \\
+		\hline
+		\%, \&, \_, \$, \#, \{, \} & 각각 \verb+\+\%, \verb+\+\&, \verb+\+\_, \verb+\+\$, \verb+\+\#, \verb+\+\{, \verb+\+\}. \\
+		\hline
+		$ \sim $ (tilde) & \$ \verb+\+sim \$. 보통 `에서'의 뜻으로 사용하지만, 되도록 `-{}-'를 사용하는 것이 좋다. \\
+		\hline
+		좌측정렬 & \verb+\+begin\{flushleft\} ... \verb+\+end\{flushleft\} (flushleft 환경) \{\verb+\+flushleft ...\}. \\
+		\hline
+		우측정렬 & flushleft 대신 flushright. \\
+		\hline
+		중앙정렬 & \verb+\+begin\{center\} ... \verb+\+end\{center\} (center 환경) 또는 \{\verb+\+centering ...\}. \\
+		\hline
+		글자 크기 & 표 아래의 명령어들을 참조바람. \\
+		\hline
+		글꼴 & 어려움. Times New Roman의 경우 해당 패키지를 포함하면 사용 가능. 휴먼테크(Humantech\_Paper\_Award) / 독후감(gshs\_reading) 양식 참조바람. \\
+		\hline
+		글자 색 & \verb+\+usepackage\{color\}. \verb+\+color[red]\{...\}. \\
+		\hline
+		각주 & \verb+\+footnote\{...\}. \\
+		\hline
+		용지크기 & a4paper 등등 \\
+		\hline
+		편집용지 & \verb+\+usepackage\{geometry\}. geometry 패키지 문서 참고바람. \\
+		\hline
+		머리말 / 꼬리말 & \verb+\+usepackage\{fancyhdr\}. fancyhdr 패키지 문서 참고바람. \\
+		\hline
+		다단 & \verb+\+usepackage\{multicol\}. multicols / multicols* 환경 사용. \\
+		\hline
+		줄 간격 조정 & setspace 패키지 관련 가이드 검색 \\
+		\hline
+		들여쓰기 조정 & \verb+\+usepackage\{indentfirst\} 등 \\
+		\hline
+		기타 의문점 & 구글에 영어로 검색. 예를 들어, latex customize font size \\
+		\hline
+		조판 오류 & 에러 메시지로 구글에 검색 / 지인에게 도움 요청 \\
+		\hline
+		수식 & \$ ... \$ 혹은 \verb+\+(...\verb+\+), \$\$ ... \$\$ 혹은 \verb+\+[...\verb+\+], equation, align, gather 환경 등 \\
+		\hline
+		번호 있는 열거 & enumerate 환경 안의 \verb+\+item 들\\
+		\hline
+		번호 없는 열거 & itemize 환경 안의 \verb+\+item 들 \\
+		\hline
+		패키지 문서 열람 & 커맨드 창에서 `texdoc xxxxx' \\
+		\hline
+		표, 그림 삽입 & 졸업논문(gshs\_thesis) 양식 내의 내용 참조 \\
+		\hline
+		참고문헌 입력 & 졸업논문(gshs\_thesis) 양식처럼, 혹은 BibTeX 사용(gshs\_thesis\_adv 참조) \\
+		\hline
+		\multicolumn{2}{|c|}{경기과학고 텍 사용자협회(\url{latex.gs.hs.kr})의 입문서도 함께 참고!} \\
+		\hline
+	\end{tabular}
+\end{table}
+{\tiny \verb+\+tiny} {\scriptsize \verb+\+scriptsize} {\footnotesize \verb+\+footnotesize} {\small \verb+\+small} {\normalsize \verb+\+normalsize} {\large \verb+\+large} {\Large \verb+\+Large} {\LARGE \verb+\+LARGE} {\huge \verb+\+huge} {\Huge \verb+\+Huge}
+\end{document}
