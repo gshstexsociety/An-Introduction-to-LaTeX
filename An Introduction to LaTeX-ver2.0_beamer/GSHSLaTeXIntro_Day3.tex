@@ -9,7 +9,10 @@
 \usepackage{ulem}
 \usepackage[per-mode=symbol]{siunitx}
 \sisetup{inter-unit-product =$\cdot$}
-\usepackage{verbatim}
+%\usepackage{verbatim}
+\usepackage{listings}
+\lstset{language = [LaTeX]{TeX},basicstyle=\footnotesize\linespread{1}\ttfamily,tabsize=4,backgroundcolor=\color[gray]{0.9},showstringspaces=false}
+\usepackage{tikz}
 \setbeamertemplate{caption}[numbered]
 \graphicspath{{images/}}
 
@@ -43,15 +46,106 @@
 		\item 그림과 표의 삽입
 		\item 논문 작성에 도움이 되는 팁들
 	\end{itemize}
+	\vfill
 	이번 시간에는 tikz를 사용하여 그림을 그리는 방법에 대해 알아보겠다.
 \end{frame}
 
+\section{들어가기 전에..}
+\begin{frame}[fragile]{패키지}
+	tikz를 사용하기 위해서는
+	\begin{lstlisting}
+\usepackage{tikz}
+	\end{lstlisting}
+	로 tikz 패키지를 추가해야 한다
+	\vfill
+	\begin{lstlisting}
+\usetikzlibrary{}
+	\end{lstlisting}
+	로 라이브러리를 추가할 수도 있다
+\end{frame}
+
+\begin{frame}[fragile]{사용 환경}
+	tikz로 그림을 그리는 방법은 다음 두 가지가 있다
+	\vfill
+	\begin{lstlisting}
+\begin{tikzpicture}[option]
+	(tikz command)
+\end{tikzpicture}
+	\end{lstlisting}
+	\vfill
+	\begin{lstlisting}
+\tikz[option]{(tikz command)}
+	\end{lstlisting}
+	\vfill
+	tikz 명령어 맨 뒤에는 반드시 세미콜론(;)을 붙여야 한다
+\end{frame}
+
+\begin{frame}{위치}
+	tikz는 데카르트 좌표계를 사용한다
+	\vfill
+	오른쪽으로 가면 x좌표가 증가하고
+
+	위쪽으로 가면 y좌표가 증가한다
+	\vfill
+	화면의 중심은 (0,0)이 아니고 내가 그린 그림이 알맞은 위치에 오도록 알아서 맞춰진다
+\end{frame}
+
 \section{점}
-\begin{frame}{\secname}
+\begin{frame}{\secname}{표기}
+	점은 (x,y)로 나타낸다
+	
+	x와 y는 각각 x좌표와 y좌표이다
+	\vfill
+	(10cm,2pt)같이 단위를 쓸 수 있는데 단위를 쓰지 않으면 기본으로 cm가 적용된다
+\end{frame}
+
+\begin{frame}[fragile]{\secname}{node}
+	다음과 같이 좌표를 지정할 수 있다
+	\begin{lstlisting}
+\node[option](name) at (coordinate){text};
+\coordinate[option](name) at (coordinate);
+	\end{lstlisting}
+	\vfill
+	node는 점의 위치에 글을 쓸 수 있고 
+	
+	coordinate는 못한다
+	\vfill
+	점은 화면에 나타나지 않는다\\
+	나타나는 것은 node로 쓴 글 뿐이다
+\end{frame}
+
+\begin{frame}[fragile]{\secname}{path}
+	path를 사용해 여러개의 점을 한꺼번에 지정할 수 있다
+	
+	\begin{lstlisting}
+\path (coordinate) node[options](name){text}
+(coordinate) node [options](name){text} ... ;
+	\end{lstlisting}
+	
+	원하는 만큼 node로 점을 지정하면 된다
+	\vfill
+	좌표를 먼저 쓰는 것에 주의하라
+	
+	뒤에서는 점의 좌표를 먼저 쓰는 형태가 흔하다
 
 \end{frame}
 
-\begin{frame}{\secname}
+\begin{frame}[fragile]{\secname}{example}
+	\begin{lstlisting}
+\node (a) at (10,0){This is a};
+\coordinate (b) at (0,10);
+\path (0,0) node(x) {X}
+(10,10) node(y) {Y};
+	\end{lstlisting}
+	
+\begin{center}
+	\begin{tikzpicture}
+	\node (a) at (3,0){This is A};
+	\coordinate (b) at (0,3);
+	\path (0,0) node(o) {O}
+		  (3,3) node(c) {C};
+	\end{tikzpicture}
+\end{center}
 
 \end{frame}
 
