@@ -42,18 +42,6 @@
 	\end{frame}
 }
 
-\newcommand{\MyBeginSection}[1]{
-	\begin{frame}
-		\vfill
-		\centering
-		\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
-			\usebeamerfont{title}\insertsectionhead\par
-		\end{beamercolorbox}
-		\footnotesize{#1}
-		\vfill
-	\end{frame}
-}
-
 \begin{document}
 
 \begin{frame}
@@ -112,10 +100,8 @@
 	화면의 중심은 (0,0)이 아니고 내가 그린 그림이 알맞은 위치에 오도록 알아서 맞춰지므로 점들의 간격만 신경쓰면 된다
 \end{frame}
 
-\AtBeginSection[]{}
 
 \section{점}
-\MyBeginSection{크기가 없고 위치만 있는 도형}
 
 \begin{frame}{\secname}{표기}
 	점은 \((x,y)\) 또는 \((\theta:r)\) 로 나타낸다
@@ -174,7 +160,7 @@
 
 
 \section{선}
-\MyBeginSection{임의의 점과 다른 한 점을 연결하는 직선은 단 하나뿐이다}
+
 \subsection{선분}
 \begin{frame}[fragile]{\secname}{\subsecname}
 	다음과 같이 여러 선분을 이어서 그릴 수 있다
@@ -235,13 +221,93 @@
 
 \end{frame}
 
-\section{면}
+\section{도형}
 \subsection{다각형}
+\begin{frame}[fragile]{\secname}{\subsecname}
+	점들을 이어 도형을 만들어주면 된다
+	
+	다시 첫번째 점을 쓰지 않고 cycle이라 쓸 수 있다
+	\begin{lstlisting}
+\draw[thick] (0,0) -- (1,1) -- (3,0) -- cycle;
+	\end{lstlisting}
+	
+	\tikz{\draw[thick] (0,0) -- (1,1) -- (3,0) -- cycle;}
+	
+	색을 칠하고 싶으면 filldraw를 사용한다
+	
+	\begin{lstlisting}
+\filldraw[brown] (0,0) -- (1,1) -- (3,0) -- cycle;
+	\end{lstlisting}
+	
+	\tikz{\filldraw[brown] (0,0) -- (1,1) -- (3,0) -- cycle;}
+	
+\end{frame}
 \subsection{원}
+\begin{frame}[fragile]{\secname}{\subsecname}
+	원의 중심 좌표를 쓴 뒤에 반지름을 써준다
+	
+	\begin{lstlisting}
+\draw (0,0) circle[radius=5mm];
+	\end{lstlisting}
+	
+	\tikz{\draw (0,0) circle[radius=1];}
+	
+	타원은 장축과 단축의 길이를 써준다
+	\begin{lstlisting}
+\draw (0,0) circle[x radius = 2, y radius = 1];
+	\end{lstlisting}
+	
+	\tikz{\draw (0,0) circle[x radius = 2, y radius = 1];}
+\end{frame}
 
+\subsection{호}
+\begin{frame}[fragile]{\secname}{\subsecname}
+	호의 시작 좌표를 쓴 뒤에 각도 범위와 반지름을 써준다	
+	\begin{lstlisting}
+\draw (8mm,0) arc (0:270:8mm);
+\filldraw (0,0) circle[radius=1pt] node[above] {O}
+	\end{lstlisting}
+	
+	\tikz{\draw (8mm,0) arc (0:270:8mm);\filldraw (0,0) circle[radius=1pt] node[above] {O}}
+	\begin{lstlisting}
+\filldraw (0,0) -- (12mm,0mm) arc (0:30:12mm) -- cycle;
+	\end{lstlisting}
+	
+	\tikz{\filldraw (0,0) -- (12mm,0) arc (0:30:12mm) -- cycle;}
+\end{frame}
+
+	
 \section{좌표 평면}
-\subsection{좌표 계}
+\subsection{좌표계}
+\begin{frame}[fragile]{\secname}{\subsecname}
+	 좌표계를 다음과 같이 그릴 수 있다
+	\begin{lstlisting}
+\draw[step=5mm, gray, thin] (-1.2,-1.2) grid (1.2,1.2);
+\draw[->,thick] (-1.25,0) -- (1.25,0);
+\draw[->,thick] (0,-1.25) -- (0,1.25);
+	\end{lstlisting}
+	
+	\tikz{\draw[step=5mm, gray, thin] (-1.2,-1.2) grid (1.2,1.2);\draw[->,thick] (-1.25,0) -- (1.25,0);\draw[->,thick] (0,-1.25) -- (0,1.25);}
+	\vfill
+	step으로 지정한 간격의 배수 위치에 격자가 생긴다
+\end{frame}
+
 \subsection{함수}
+\begin{frame}[fragile]{\secname}{\subsecname}
+	정의역을 정해주고 함수를 쓰면 점을 찍어준다
+	
+	샘플 수를 늘려주면 더 매끄럽게 된다
+	\begin{lstlisting}
+\draw[step=5mm, gray, thin] (-1.2,-1.2) grid (1.2,1.2);
+\draw[domain=-1:1,samplse=50] plot (\x,{sin(pi*\x r)});
+	\end{lstlisting}
+	
+	\tikz{\draw[step=5mm, gray, thin] (-1.2,-1.2) grid (1.2,1.2);\draw[domain=-1:1,samples=50] plot (\x,{sin(pi*\x r)});}
+	\vfill
+	함수를 중괄호로 감싸주어야 한다
+	
+	(x뒤의 r은 radian을 쓰라는 뜻이다)
+\end{frame}
 
 \section{Extra Tips}
 
