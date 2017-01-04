@@ -1,0 +1,194 @@
+\documentclass[12pt]{beamer}
+\usetheme{Hannover}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[english]{babel}
+\usepackage{kotex}
+%\usepackage[pdfencoding=auto]{hyperref}
+\hypersetup{pdfencoding=auto}
+\usepackage{ulem}
+\usepackage[per-mode=symbol]{siunitx}
+\sisetup{inter-unit-product =$\cdot$}
+%\usepackage{verbatim}
+\usepackage{listings}
+%\usepackage{hyperref}
+%\usepackage{url}
+\usepackage{tikz}
+\setbeamertemplate{caption}[numbered]
+%\graphicspath{{images/}}
+
+
+\title[\LaTeX \ - 설치하기]{\LaTeX 입문 - Install \TeX}
+
+\author{경기과학고 \TeX 사용자협회}
+\institute[GSHSTeXSociety]{\url{latex.gs.hs.kr}}
+\date{마지막 수정일 : \today}
+
+%\setbeamertemplate{navigation symbols}{}%to suppress navigation tools
+
+\AtBeginSection[]{
+	\begin{frame}
+		\vfill
+		\centering
+		\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+			\usebeamerfont{title}\insertsectionhead\par
+		\end{beamercolorbox}
+		\vfill
+	\end{frame}
+}
+
+\newcommand{\SetupImageSlideShow}[5]{
+	\begin{frame}{#1}
+		\framesubtitle{#2}
+		\begin{figure}
+			\centering
+			\includegraphics[width=#5\textwidth]{../latex_2016_install/setup_latex#3.png}
+			\caption{#4}
+		\end{figure}
+	\end{frame}
+}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+
+\section{개요}
+\begin{frame}{텍 사용 환경 준비}
+	\framesubtitle{Windows 기준}
+	Windows에서 \TeX 을 사용하기 위해서는
+	\begin{enumerate}
+		\item 텍 엔진 : \textbf{TeXlive}[텍라이브]\footnote{TeXlive는 매년 갱신되나, 이 문서에서는 2016년의 것을 기준으로 설명한다.}
+		\item 텍 에디터 : TeXstudio 혹은 TeXmaker
+		\begin{itemize}
+			\item TeXlive를 설치하면 TeXworks가 기본으로 설치되지만,
+			TeXstudio가 훨씬 편함.
+			\item TeXstudio와 TeXmaker는 거의 비슷. 앞으로 모든 것은 TeXstudio를 기준으로 설명함.
+		\end{itemize}
+	\end{enumerate}
+	를 설치해야 한다.
+\end{frame}
+\begin{frame}{텍 사용 환경 준비}
+	\framesubtitle{Mac 기준}
+	Mac에서 \TeX 을 사용하기 위해서는
+	\begin{enumerate}
+		\item 텍 엔진 : \textbf{MacTeX}[맥텍]
+		\item 텍 에디터 : TeXstudio 혹은 TeXmaker
+		\begin{itemize}
+			\item MacTeX을 설치하면 TeXshop이 기본으로 설치되지만,
+			TeXstudio가 훨씬 편함.
+			\item TeXstudio와 TeXmaker는 거의 비슷. 앞으로 모든 것은 TeXstudio를 기준으로 설명함.
+		\end{itemize}
+	\end{enumerate}
+	를 설치해야 한다.
+\end{frame}
+
+
+\section{텍 엔진 설치}
+
+\subsection{TeXlive - 방법 1}
+\begin{frame}{TeXlive 설치}
+	\framesubtitle{방법 1 - 유선/고속 인터넷의 경우}
+	\small
+	\begin{itemize}
+		\item \url{latex.gs.hs.kr} - `설치' 탭
+		\item Windows 아래의 `TeX Live' 클릭
+		\item `\textbf{How to acquire TeX Live}' 에서 download 클릭
+		\begin{itemize}
+			\item 위 과정을 통해 이 링크\footnote{\url{tug.org/texlive/acquire-netinstall.html}}에 들어오게 된다.
+		\end{itemize}
+		\item \texttt{\underline{install-tl-windows.exe}}를 클릭하여 다운로드, 실행.
+		\item 이렇게 하면 \textbf{설치와 다운로드가 동시에 진행}되어 설치가 매우 느릴 수 있다.
+		\footnote{2016.12 교내 무선 인터넷 기준으로 최소 2시간 소요}
+	\end{itemize}
+\end{frame}
+
+\SetupImageSlideShow{TeXlive 설치}{방법 1의 진행 과정}{8}{simple install 선택 후 next}{.8}
+\SetupImageSlideShow{TeXlive 설치}{방법 1의 진행 과정}{9}{install을 클릭하면 되겠죠?}{.8}
+\SetupImageSlideShow{TeXlive 설치}{방법 1의 진행 과정}{10}{그럼 뭔가 압축을 풀고 설치되는거 같이 보임.}{.8}
+\SetupImageSlideShow{TeXlive 설치}{방법 1의 진행 과정}{11}{하지만 진짜 설치는 지금부터... `next'를 클릭}{.8}
+\SetupImageSlideShow{TeXlive 설치}{방법 1의 진행 과정}{12}{그럼 다음의 과정들이 쭈욱$ \sim $ 진행됨}{.8}
+\SetupImageSlideShow{TeXlive 설치}{방법 1의 진행 과정}{13}{$ \ast $ 응답없음이 뜨더라도 당황하지 말고 기다림}{.8}
+\SetupImageSlideShow{TeXlive 설치}{방법 1의 진행 과정}{27}{기다리면 뜸. 설치 디렉토리는 바꾸지 말고 그냥 `next'}{.8}
+\SetupImageSlideShow{TeXlive 설치}{방법 1의 진행 과정}{28}{기본 paper size : a4 등 모두 체크하고 `next'}{.8}
+\SetupImageSlideShow{TeXlive 설치}{방법 1의 진행 과정}{30}{설치 전 최종 확인. 이상없으면 그냥 `install'}{.8}
+\SetupImageSlideShow{TeXlive 설치}{방법 1의 진행 과정}{33}{설치는 쭈욱 계속 됨}{.8}
+\SetupImageSlideShow{TeXlive 설치}{방법 1의 진행 과정}{34}{끝났으니까 `finish' \newline 여기까지 오는데 빠르면 1시간\ldots 늦으면\ldots 2시간 이상 걸림 }{.8}
+
+
+\subsection{TeXlive - 방법 2}
+\begin{frame}{TeXlive 설치}
+	\framesubtitle{방법 2 - 무선/교내 인터넷의 경우}
+	\small
+	\begin{itemize}
+		\item \url{latex.gs.hs.kr} - `설치' 탭
+		\item Windows 아래의 `TeX Live' 클릭
+		\item `\textbf{How to acquire TeX Live}' 에서 other methods 클릭
+		\item 3번째의 `Downloading one huge ISO file' 클릭
+		\item `download from a nearby CTAN mirror' 클릭
+		\begin{itemize}
+			\item 위 과정을 통해 이 링크\footnote{\url{http://ftp.ktug.org/tex-archive/systems/texlive/Images/}}에 들어오게 된다.
+		\end{itemize}
+		\item \texttt{\underline{texlive2016.iso}} 클릭, 다운로드
+		\item 반디집, 알집 등을 사용하여 iso 파일의 압축을 푼다.
+		\item 압축해제된 폴더 내의 \texttt{install-tl-windows.bat} 실행
+	\end{itemize}
+\end{frame}
+\begin{frame}{TeXlive 설치}
+	\framesubtitle{방법 2 - 무선/교내 인터넷의 경우}
+	\begin{itemize}
+		\item \texttt{install-tl-windows.bat}을 실행하고 나면 방법 1에서와 비슷한 과정을 거치게 된다.
+		\item 이 경우 대부분 1시간 이내로 설치가 마무리된다.
+		\item \textbf{중요} : TeXlive를 설치하는 동안에는 다른 프로그램을 모두 종료하고, 컴퓨터를 건드리지도 말자. `응답 없음'이 뜰 수 있다.
+		\item 교내의 경우, 다수가 TeXlive를 방법 1로 설치할 경우 과도한 트래픽을 발생시킬 수 있다. 방법 2를 통해 iso파일을 받아, 옆 친구에게 USB로 돌리자.
+	\end{itemize}
+\end{frame}
+\subsection{MacTeX(Mac OS)}
+\begin{frame}{MacTeX 설치}
+	\begin{itemize}
+		\item (Windows에 비해 간단하다.)
+		\item \url{latex.gs.hs.kr} - `설치' 탭
+		\item Mac OS 아래의 `MacTeX' 클릭
+		\item `\textbf{MacTeX Download}' 클릭
+		\item `\textbf{MacTeX.pkg}' 클릭, 다운로드.
+		\item 시키는 대로 하다 보면 설치 끝
+	\end{itemize}
+\end{frame}
+
+\section{텍 에디터 설치}
+\SetupImageSlideShow{TeXstudio 설치}{}{59}{\url{texstudio.org} 접속 후 다운로드, 설치.}{}
+
+\section{작동 확인}
+
+\SetupImageSlideShow{작동 확인}{}{60}{TeXstudio를 켜면 이런 화면이 뜬다.}{}
+\SetupImageSlideShow{작동 확인}{}{61}{File - New 를 누르면 새 파일이 뜬다. 아직 저장은 되지 않은 상태.}{}
+\SetupImageSlideShow{작동 확인}{}{62}{여기에 아주 기본적인(?) 코드를 써넣어 보자.}{}
+\SetupImageSlideShow{작동 확인}{}{64}{이제 위쪽의 초록색 화살표(두번째 것)를 눌러보자. 그러면 뭐라고 중얼거리며 문서가 조판된다.}{}
+\SetupImageSlideShow{작동 확인}{}{65}{위쪽의 돋보기 모양(빨간 네모 오른쪽 것)을 눌러보자. 그러면 조판된 문서의 미리보기 창이 뜬다.}{}
+
+\begin{frame}{작동 확인}
+	\begin{itemize}
+		\item 이와 같이 문서 조판이 된다면, 당신은 \TeX 을 사용할 준비가 완료되었다.
+		\begin{itemize}
+			\item 사실 TeXstudio을 처음 켤 때, TeX이 깔려있지 않다는 Warning이 뜨지 않았다면 이미 TeXlive/MacTeX 은 잘 설치되어 있다는 것을 의미한다.
+			\item 어디선가 되지 않는다면 다른 사람에게 물어볼 것. 벌써부터 포기하기에는 너무 아까운 텍입니다 ㅠㅠ
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\section{텍과 친해지기}
+\begin{frame}{텍과 친해지기}
+	\begin{itemize}
+		\item \url{latex.gs.hs.kr} - `다운로드' 에서 받을 수 있는
+		\begin{itemize}
+			\item 입문서들\footnote{An Introduction to LaTeX-ver2.0\_beamer : Day0,1,2,\ldots} 을 읽거나,
+			\item 각종 양식들을 가지고 이것저것 해보거나,
+		\end{itemize}
+		\item 구글에 lshort-kr이라고 검색하면 나오는 문서를 시간 내어 읽어보면 좋다.
+		\item Happy \TeX-ing!
+	\end{itemize}
+\end{frame}
+\end{document}
