@@ -118,6 +118,8 @@
 		\begin{itemize}
 			\item 예제 코드를 보면서 \TeX 배우기 (굉장히 중요)
 		\end{itemize}
+		\vspace{1cm}
+		\item {\scriptsize \textbf{다운로드 방법} : \url{latex.gs.hs.kr} - 다운로드 - `다운로드 페이지 링크'}
 	\end{itemize}
 \end{frame}
 \subsection{\TeX 문서 구조}
@@ -358,13 +360,26 @@
 	다른 글꼴들을 사용하는 것도 불가능하지는 않으나 권장되지 않는다. \TeX 은 논문 작성에 특화된 학술 언어이다. 논문에서 여러 글꼴을 사용하는 것은 좋지 않다.
 \end{frame}
 \begin{frame}{한글 글꼴...}
-	``사실 공식적인 양식이 hwp 나 word일 경우 발생하는 가장 큰 문제점은 (한글)폰트입니다. 영어의 경우 Times New Roman 을 쉽게 사용 가능하고, 한글의 경우 xetex을 이용하면 바탕, 굴림, 궁서를 넣을 수 있으나 신명조 같은거는 저작권법상 아래아한글 내에서의 사용만이 허락된 거라... (ttf파일을 가지고 있다면 텍 전용 폰트 파일인 tfm을 만드는 것은 크게 어렵지는 않습니다)  Arial 같은 영어폰트는 금방 하는데 한글 폰트는 KTUG에서 시키는 대로 해야돼요 ''
-	
-	$ \rightarrow $ 과학전람회와 같이 hwp 로 양식을 제공하는 경우 어쩔 수 없이 아래아한글로 작성해야 한다...
+	\begin{scriptsize}
+		``사실 공식적인 양식이 hwp 나 word일 경우 발생하는 가장 큰 문제점은 (한글)폰트입니다. 영어의 경우 Times New Roman 을 쉽게 사용 가능하고, 한글의 경우 xetex을 이용하면 바탕, 굴림, 궁서를 넣을 수 있으나 신명조 같은거는 저작권법상 아래아한글 내에서의 사용만이 허락된 거라... (ttf파일을 가지고 있다면 텍 전용 폰트 파일인 tfm을 만드는 것은 크게 어렵지는 않습니다)  Arial 같은 영어폰트는 금방 하는데 한글 폰트는 KTUG에서 시키는 대로 해야돼요'' % quoted from 32기 박승원
+	\end{scriptsize}
+	\small
+	\begin{itemize}
+		\item 과학전람회와 같이 hwp 로 양식을 제공하는 경우 어쩔 수 없이 아래아한글로 작성해야 한다.
+		\begin{itemize}
+			\item `신명조'와 같은 아래아한글 내장 폰트의 경우 ttf, tfm 파일을 협회에서 공유할 경우 저작권법에 저촉될 수 있기 때문.
+		\end{itemize}
+		\item 이 외에도, xelatex은 일부 컴퓨터에서 매우 느리다.
+		\begin{itemize}
+			\item 평소에는 pdflatex으로 컴파일하고, 최종본 제작 시 xelatex 사용
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 \subsection{양식 호환}
 \begin{frame}{각종 대회 양식}
-	아래의 표는 \today 기준이다. \footnote{과학전람회의 경우 글꼴 문제로 인해 \TeX 양식 제작이 어려울 뿐더러, 글꼴 저작권 문제가 있음.}
+	아래의 표는
+	2017년 1월 % 표 내용 변경사항이 없음을 확인 후 날짜 업데이트하시오.
+	기준이다. \footnote{과학전람회의 경우 글꼴 문제로 인해 \TeX 양식 제작이 어려울 뿐더러, 글꼴 저작권 문제가 있음.}
 	\begin{footnotesize}
 		\begin{table}
 			\centering
