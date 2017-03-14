@@ -152,54 +152,6 @@
 	해당 파일을 연 상태에서 TeXstudio - File - Make Template
 \end{frame}
 \section{\TeX 과 친해지기}
-\subsection{수식 입력}
-\begin{frame}[fragile]{`mathmode'}
-	수식 입력을 위해서는 amsmath 패키지를 불러야 한다.
-	\begin{enumerate}
-		\item \verb|\( ... \)| : 행 내 수식 \\
-		\( e^{i\pi}+1=0 \)
-		\item \verb|\[ ... \]| : 번호 없는 표시형 수식
-		\[ e^{i\pi}+1=0 \]
-		\item \verb|\begin{equation} ... \end{equation}|
-		: 번호 있는 표시형 수식
-		\footnote{equation 환경 외에도 여럿 있음. 부록 참조 바람.}
-		\begin{equation}
-			e^{i\pi}+1=0
-		\end{equation}
-	\end{enumerate}
-	수식에 붙은 번호를 referencing 할 수 있는데, 이건 다음 시간에...
-\end{frame}
-\begin{frame}[fragile]{수식 문법}
-	TeXstudio의 왼쪽 바에서 전부 찾아볼 수 있다.
-	\begin{itemize}
-		\item \verb|\sin{ ... }|, \verb|\log{ ... }|
-		: 삼각함수, 로그함수는 기울여 쓰면 안되므로 이렇게 써야 한다.
-		\item \verb|\frac{num}{den}|
-		: 분자 num, 분모 den인 분수
-		\item \verb|\sqrt[n]{x}|
-		: $x$의 $n$제곱근
-		\item \verb|\sum_{i = 1}^{n}{ ... }|
-		: 시그마 합 표기법.
-		\item \verb|\begin{cases} ... \end{cases}|
-		: 중괄호로 경우 나누기
-	\end{itemize}
-	용례는 다음 페이지 참조. {\footnotesize (대괄호와 중괄호 구분에 유의!)}
-\end{frame}
-\begin{frame}{수식 용례}
-	코드 : \footnote{\url{http://pastebin.com/iJ8AJ8L1}}
-	\[ \sin{\pi} = 0 \]
-	\[ \log_{2}{8} = 3 \]
-	\[ \frac{6}{3} = 2 \]
-	\[ \sqrt[3]{8} = 2 \]
-	\[ \sum_{i=1}^{n}{1} = n \]
-	\begin{equation}
-		f(n) =
-		\begin{cases}
-			0 & \text{if}\ n < 0 \\ 
-			1 & \text{if}\ n \geq 1
-		\end{cases}
-	\end{equation}
-\end{frame}
 \subsection{워드프로세서 기본사항}
 \begin{frame}[fragile]{특수문자}
 	\TeX 에서 바로 사용할 수 없는 문자 : 
@@ -299,7 +251,54 @@
 		\item 전원 공급을 끊고, 측정을 종료한다.
 	\end{enumerate}
 \end{frame}
-\section{부록}
+\subsection{수식 입력}
+\begin{frame}[fragile]{`mathmode'}
+	수식 입력을 위해서는 amsmath 패키지를 불러야 한다.
+	\begin{enumerate}
+		\item \verb|\( ... \)| : 행 내 수식 \\
+		\( e^{i\pi}+1=0 \)
+		\item \verb|\[ ... \]| : 번호 없는 표시형 수식
+		\[ e^{i\pi}+1=0 \]
+		\item \verb|\begin{equation} ... \end{equation}|
+		: 번호 있는 표시형 수식
+		\footnote{equation 환경 외에도 여럿 있음. 부록 참조 바람.}
+		\begin{equation}
+		e^{i\pi}+1=0
+		\end{equation}
+	\end{enumerate}
+	수식에 붙은 번호를 referencing 할 수 있는데, 이건 다음 시간에...
+\end{frame}
+\begin{frame}[fragile]{수식 문법}
+	TeXstudio의 왼쪽 바에서 전부 찾아볼 수 있다.
+	\begin{itemize}
+		\item \verb|\sin{ ... }|, \verb|\log{ ... }|
+		: 삼각함수, 로그함수는 기울여 쓰면 안되므로 이렇게 써야 한다.
+		\item \verb|\frac{num}{den}|
+		: 분자 num, 분모 den인 분수
+		\item \verb|\sqrt[n]{x}|
+		: $x$의 $n$제곱근
+		\item \verb|\sum_{i = 1}^{n}{ ... }|
+		: 시그마 합 표기법.
+		\item \verb|\begin{cases} ... \end{cases}|
+		: 중괄호로 경우 나누기
+	\end{itemize}
+	용례는 다음 페이지 참조. {\footnotesize (대괄호와 중괄호 구분에 유의!)}
+\end{frame}
+\begin{frame}{수식 용례}
+	코드 : \footnote{\url{http://pastebin.com/iJ8AJ8L1}}
+	\[ \sin{\pi} = 0 \]
+	\[ \log_{2}{8} = 3 \]
+	\[ \frac{6}{3} = 2 \]
+	\[ \sqrt[3]{8} = 2 \]
+	\[ \sum_{i=1}^{n}{1} = n \]
+	\begin{equation}
+	f(n) =
+	\begin{cases}
+	0 & \text{if}\ n < 0 \\ 
+	1 & \text{if}\ n \geq 1
+	\end{cases}
+	\end{equation}
+\end{frame}
 \subsection{여러 수식 환경들}
 \begin{frame}[fragile]{equation / equation*}
 	equation 환경을 쓰되, 번호를 매기고 싶지 않을 경우 equation*을 
@@ -308,7 +307,7 @@
 	등식 맨 뒤에 \verb|\nonumber|를 붙여도 된다. 코드 : 
 	\footnote{\url{http://pastebin.com/Ywaz4pA7}}
 	\begin{equation*}
-		\mathcal{L} \equiv T-V
+	\mathcal{L} \equiv T-V
 	\end{equation*}
 	통상적으로 \TeX 에서는 equation* 외에도 *를 붙이면 번호가 매겨지지 않는다. 뒤에 설명할 align, gather 등도 align*, gather* 환경이 존재하며, section 과 같은 것도 section* 가 존재.
 \end{frame}
@@ -320,6 +319,42 @@
 	\end{itemize}
 	Tip : 품위있는(?) 논문에서는, 중요한 수식들은 모두 온점(.) 으로 마무리한다.
 \end{frame}
+\section{논문 작성}
+\subsection{문서 계층}
+\begin{frame}{문서 계층}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\textwidth]{hier.pdf}
+	\end{figure}
+\end{frame}
+\subsection{참고 문헌 삽입}
+\begin{frame}{참고 문헌 삽입}
+	졸업논문 양식(이면서도 사용법) 파일에 아주 잘 설명되어 있다. 링크 : \footnote{\url{https://github.com/gshslatexintro/pdf-cloud/raw/master/gshs_thesis_certified_160210.pdf}}
+	\vspace{1cm}
+	
+	참고문헌들은 본문 내에서 반드시 인용되어야 하며, 인용 순으로 정렬되어야 한다. 참고문헌 개수가 많아질 경우 인용 순 정렬이 번거로워지는데, 이럴 땐 BibTeX 을 사용하면 좋다. BibTeX 사용법은 졸업논문 advanced version 에 설명되어 있다. 링크 : \footnote{\url{https://github.com/gshslatexintro/pdf-cloud/raw/master/gshs_thesis_14XXX_main_160422.pdf}}
+\end{frame}
+\subsection{ToC, LoF, LoT}
+\begin{frame}{ToC, LoF, LoT}
+	\LaTeX 에 의해 \textbf{자동 생성} 된다! 단, 이들은 컴파일을 2회 해 주어야 갱신된다. \footnote{.tex 파일과 같은 디렉토리 내에 생성되는 .toc, .lof, .lot 파일이 이들이다.}
+	\begin{itemize}
+		\item Table of Contents : ToC \\
+		\textbackslash tableofcontents
+		\item List of Figures : LoF
+		\textbackslash listoffigures
+		\item List of Tables : LoT
+		\textbackslash listoftables
+	\end{itemize}
+	
+\end{frame}
+\begin{frame}{요약 캡션}
+	LoF 와 LoT 에는 해당하는 그림과 표의 번호와 caption 이 함께 나타난다. 하지만, caption이 긴 경우 이것이 LoF/LoT에 그대로 나온다면 복잡하며 미관상 좋지 않다. 이 경우, 그림/표에서 대괄호 안에 요약 캡션을 달아주면 이것만 LoF/LoT 에 표시된다.
+	\begin{center}
+		\small
+		\fbox{\textbackslash caption[LoF/LoT에 표시되는 캡션]\{본문에 나타나는 캡션\}}
+	\end{center}
+\end{frame}
+\section{부록}
 \subsection{문서의 유형}
 \begin{frame}{자주 사용되는 문서 종류}
 	\begin{tabular}{|c|c|}
@@ -381,7 +416,7 @@
 				& Hwp & Word & TeX \\
 				\hline
 				\hline
-				경기과학고 R\&E & 공식 & X & (비)공식 \\
+				경기과학고 R\&E & 공식 & 비공식 & (비)공식 \\
 				\hline
 				경기과학고 졸업논문 & 공식 & 공식 & 공식 \\
 				\hline
@@ -396,5 +431,64 @@
 			\end{tabular}
 		\end{table}
 	\end{footnotesize}
+\end{frame}
+\section{Extra Tips}
+\begin{frame}{Extra Tips}
+	\begin{itemize}
+		\item \textbf{Ask Google!} (중요)
+		\begin{itemize}
+			\item `표의 칸에 대각선 어떻게 넣나요?' : \\
+			구글 검색 : `latex table diagonal line'
+			\item 키워드를 모르겠다면, 횡설수설 검색하다가 키워드를 찾고, 그 키워드로 다시 검색하면 된다.
+		\end{itemize}
+		\item 중간중간에 컴파일을 해 본다. \\
+		수정 사항이 많은데 에러가 발생할 경우, 찾기가 힘들어짐.
+		\item 긴 단어를 많이 사용해야 할 경우, newcommand를 통해 하나의 명령어로 만들어 버린다.
+	\end{itemize}
+	\begin{footnotesize}
+		예시 : \textbackslash newcommand\{\textbackslash scp\}\{SCP Artificial Muscle\} 와 같이 지정하고 본문에서 `\textbackslash scp 은...' 라고만 써놓으면 `SCP Artificial Muscle은...' 와 같이 나온다.
+	\end{footnotesize}
+\end{frame}
+\begin{frame}{Extra Tips}
+	\begin{itemize}
+		\item TeXstudio에서는 원하는 부분만 컴파일 하여 미리 보는 것이 가능하다. 
+		
+		마우스 오른쪽 버튼 클릭 후 Preview Selection/Parentheses (단축키 Alt+P).
+		
+		해제는 마우스 버튼 클릭 후 Clear Inline Preview(단축키 없음).
+	\end{itemize}
+\end{frame}
+\begin{frame}{End}
+	\begin{itemize}
+		\item 이번 강의는 전공과목을 불문하고 \TeX 을 사용하는 방법에 관한 것이었다.
+		\item 전공에 따라 이 문서의 내용 외에도 더 알아야 할 것은 많다. 
+		\begin{itemize}
+			\item 예를 들어 수학의 경우 theorem 환경을, 정보과학의 경우 verbatim 이나 lstlistings 환경을 사용해야 할 것이다.
+		\end{itemize}
+		이러한 전공에 따른 세부 내용은 여기에서 다루지 않았다. 이것들은 독자들이 각자 구글링하거나 \LaTeX by Example 책을 통하여 공부해야 하는 부분이다.
+		\item 경기과학고 \TeX 사용자협회\footnote{\url{latex.gs.hs.kr}}  에 다양한 전공의 \TeX 사용자들이 작성했던 예시 tex 문서들을 공유하고 있으므로 참고할 수 있을 것이다.
+	\end{itemize}
+\end{frame}
+\begin{frame}{+ latex.gs.hs.kr 활용}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\textwidth]{homepage.png}
+	\end{figure}
+\end{frame}
+\begin{frame}{구인 광고}
+	\framesubtitle{2代 개발진을 뒤이을 후배님들을 찾습니다.}
+	\begin{itemize}
+		\item 본 협회의 활동에 참여하고 싶다면,
+		\begin{itemize}
+			\item GitHub에 가입한 뒤
+			\item username을 서울 선생님께 발송.
+			\item \url{github.com/gshslatexintro} 멤버에 추가
+			\item 선생님들께서도 참여 가능합니다.
+		\end{itemize}
+		\item 저희선배가 그랬듯이, 저희가 그랬듯이, 양식 제작 등의 활동을 하며 텍을 공부해볼 수 있을 것입니다. 절호의 기회를 놓치지 마세요!
+		\begin{itemize}
+			\item 3代 회장 및 개발진, 웹마스터 모집.
+		\end{itemize}
+	\end{itemize}
 \end{frame}
 \end{document} 
