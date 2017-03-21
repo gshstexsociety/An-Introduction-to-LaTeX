@@ -38,9 +38,8 @@
 \begin{frame}
 \titlepage % Print the title page as the first slide
 \end{frame}
-
-\section{\LaTeX}
-\begin{frame}{\LaTeX 이란?{\normalsize (Day 0와 동일)}}
+\section{What?}
+\begin{frame}{\LaTeX 이란?}
 	\begin{itemize}
 		\item 개발
 		\begin{itemize}
@@ -58,63 +57,110 @@
 		\end{itemize}
 	\end{itemize}
 \end{frame}
-\subsection{\TeX 시작하기}
-\begin{frame}{\TeX 설치하기{\normalsize (Day 0와 동일)}}
-	KTUG(Korean \TeX User Group)\footnote{한글 \TeX 사용자 그룹, [케이턱]}
+\begin{frame}{문서 편집기의 양대 산맥}
+	What You See Is What You...
+	\vfill
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			Get! \\
+			\vfill
+			우리가 보통 사용하는 한컴오피스, MS 워드. \\
+			\begin{center}
+				\includegraphics[width=0.4\textwidth]{hanwordicon.jpg}
+				~
+				\includegraphics[width=0.4\textwidth]{mswordicon.jpg}
+			\end{center}
+			
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			Mean! \\
+			\vfill
+			HTML, \LaTeX \\
+			\begin{center}
+				\includegraphics[width=0.4\textwidth]{htmlicon.png}
+			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+\section{Why?}
+\begin{frame}{~}
+	\vfill
+	\centering
+	\begin{beamercolorbox}[sep=8pt,center,shadow=true,rounded=true]{title}
+		\Huge 그래서, 왜 \\ \LaTeX 을 쓰는거지?
+	\end{beamercolorbox}
+	\vfill
+\end{frame}
+\subsection{장점}
+\begin{frame}{\LaTeX 의 장점}
+	\LaTeX 의 장점들
 	\begin{itemize}
-		\item \TeX 사용 환경 조성 : TeXLive
-		\item 한글을 사용하기 위한 TeXLive 가 koTeXLive
-		\item 내려받기 - 설치 방법대로 따라간다.
-		\item 용량이 약 2GB. 시간적 여유를 가지고 설치.
-	\end{itemize}
-	\TeX 문서 편집기
-	\begin{itemize}
-		\item TeXLive에서 기본 제공 : TeXWorks / TeXshop
-		\item 하지만 TeXstudio\footnote{texstudio.org}가 훠---얼씬 
-		편하다!
+		\item 수식 편집기로서는 수학에서는 \textbf{표준}
+		\item 초기설정만 잘 해놓으면 노가다가 줄어듦.
+		\begin{itemize}
+			\item 차례, 그림/표 목차를 만들 때...명령어 하나로 끝!
+			\item 참고문헌이 50개인데... 자동 인용순 정렬!
+			\item `수정한다'에 대한 공포감(?) 전혀 없음
+		\end{itemize}
+		\item Cross-referencing : `그림 8a에 의하면...'
+		\begin{itemize}
+			\item 편하며, 실시간으로 `큰그림'이 보인다. 
+		\end{itemize}
+		\item 벡터 이미지(svg, eps, pdf) 손쉽게 첨부
+		\begin{itemize}
+			\item 훨씬 깔끔하다. 논문의 권위는 여기에서 출발.
+		\end{itemize}
 	\end{itemize}
 \end{frame}
-\begin{frame}{경기과학고 텍 사용자협회}
-	\framesubtitle{설립 배경}
-	\begin{itemize}
-		\item 2015.7 : 31기 윤지용의 \TeX 졸업논문 공개
-		\item 2015.8.2: \url{github.com/gshslatexintro} 개설
-		\begin{itemize}
-			\item 32기 박승원 - 교우 간 \TeX 스터디 활동을 위해 개설
-		\end{itemize}
-		\item 2015.12 :
-	\end{itemize}
-	\begin{quote}
-		``\TeX 사용에 대한 진입 장벽을 없애고, \\
-		\TeX 을 사용한다면 누구나 쓸 수 있는 \\
-		각종 양식 파일을 공유하고 공동 편집하자!''
-	\end{quote}
-	\vspace{-.5cm}
-	\begin{flushright}
-		--- 32기 협회 일동
-	\end{flushright}
-	$ \rightarrow $ 텍 입문서 제작, 텍 워크샵 진행, 각종 텍 예제 및 양식 제작/배포 등\ldots
+\begin{frame}{작업량}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\textwidth]{msword_vs_latex.png}
+	\end{figure}
 \end{frame}
-\begin{frame}{경기과학고 텍 사용자협회}
-	\framesubtitle{하는 일}
+\subsection{Examples}
+\begin{frame}{예시 - 선형대수학 요약본}
+	\framesubtitle{무려 100페이지! By 14129 황동욱 + 32기}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\textwidth]{ex_linearalgebra.png}
+	\end{figure}
+\end{frame}
+\begin{frame}{예시 - 고급물리학 답지}
+	\framesubtitle{깔끔한 수식, 그림. By 14041 박승원 + 32기}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\textwidth]{ex_advphysics.png}
+	\end{figure}
+\end{frame}
+\begin{frame}{예시 - beamer presentation!}
+	\framesubtitle{강의자료. By 목진욱 박사님}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\textwidth]{ex_physicsseminar.png}
+	\end{figure}
+\end{frame}
+\subsection{단점}
+\begin{frame}{\LaTeX 의 단점?}
 	\begin{itemize}
-		\item 각종 양식 및 입문서, 예시작 온라인 제공
+		\item 非사용자가 읽거나 편집하지 못함
 		\begin{itemize}
-			\item 주소 : \url{latex.gs.hs.kr}
-			\item 지금 보고 있는 이 자료도 홈페이지에서 다운 가능!
+			\item 가르쳐주면 된다. 
+			\item 초반에만 조금 고생하면 된다...
 		\end{itemize}
-		\item 양식
+		\item 양식에 맞게 하는 초기 설정이 힘들다. 
 		\begin{itemize}
-			\item R\&E, 졸업논문, 휴먼테크, beamer 등
+			\item 전문가들에게 맡기자.
+			\item 경기과학고 \TeX 사용자협회의 설립취지.
 		\end{itemize}
-		\item 예시(예제)
+		\item 내가 편집하고 있는게 바로 보이지 않는걸?
 		\begin{itemize}
-			\item 예제 코드를 보면서 \TeX 배우기 (굉장히 중요)
+			\item 수식의 경우 거의 실시간으로 inline preview 가능
+			\item ... 이건 WYSIWYM 의 숙명
 		\end{itemize}
-		\vspace{1cm}
-		\item {\scriptsize \textbf{다운로드 방법} : \url{latex.gs.hs.kr} - 다운로드 - `다운로드 페이지 링크'}
 	\end{itemize}
 \end{frame}
+\section{\LaTeX}
 \subsection{\TeX 문서 구조}
 \begin{frame}{\TeX 문서 구조}
 	Preamble[프림블]
@@ -458,21 +504,89 @@
 		해제는 마우스 버튼 클릭 후 Clear Inline Preview(단축키 없음).
 	\end{itemize}
 \end{frame}
-\begin{frame}{End}
-	\begin{itemize}
-		\item 이번 강의는 전공과목을 불문하고 \TeX 을 사용하는 방법에 관한 것이었다.
-		\item 전공에 따라 이 문서의 내용 외에도 더 알아야 할 것은 많다. 
-		\begin{itemize}
-			\item 예를 들어 수학의 경우 theorem 환경을, 정보과학의 경우 verbatim 이나 lstlistings 환경을 사용해야 할 것이다.
-		\end{itemize}
-		이러한 전공에 따른 세부 내용은 여기에서 다루지 않았다. 이것들은 독자들이 각자 구글링하거나 \LaTeX by Example 책을 통하여 공부해야 하는 부분이다.
-		\item 경기과학고 \TeX 사용자협회\footnote{\url{latex.gs.hs.kr}}  에 다양한 전공의 \TeX 사용자들이 작성했던 예시 tex 문서들을 공유하고 있으므로 참고할 수 있을 것이다.
-	\end{itemize}
-\end{frame}
 \begin{frame}{+ latex.gs.hs.kr 활용}
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=\textwidth]{homepage.png}
+	\end{figure}
+\end{frame}
+\begin{frame}{경기과학고 텍 사용자협회}
+	\framesubtitle{설립 배경}
+	\begin{itemize}
+		\item 2015.7 : 31기 윤지용의 \TeX 졸업논문 공개
+		\item 2015.8.2: \url{github.com/gshslatexintro} 개설
+		\begin{itemize}
+			\item 32기 박승원 - 교우 간 \TeX 스터디 활동을 위해 개설
+		\end{itemize}
+		\item 2015.12 :
+	\end{itemize}
+	\begin{quote}
+		``\TeX 사용에 대한 진입 장벽을 없애고, \\
+		\TeX 을 사용한다면 누구나 쓸 수 있는 \\
+		각종 양식 파일을 공유하고 공동 편집하자!''
+	\end{quote}
+	\vspace{-.5cm}
+	\begin{flushright}
+		--- 32기 협회 일동
+	\end{flushright}
+	$ \rightarrow $ 텍 입문서 제작, 텍 워크샵 진행, 각종 텍 예제 및 양식 제작/배포 등\ldots
+\end{frame}
+\begin{frame}{경기과학고 텍 사용자협회}
+	\framesubtitle{하는 일}
+	\begin{itemize}
+		\item 각종 양식 및 입문서, 예시작 온라인 제공
+		\begin{itemize}
+			\item 주소 : \url{latex.gs.hs.kr}
+			\item 지금 보고 있는 이 자료도 홈페이지에서 다운 가능!
+		\end{itemize}
+		\item 양식
+		\begin{itemize}
+			\item R\&E, 졸업논문, 휴먼테크, beamer 등
+		\end{itemize}
+		\item 예시(예제)
+		\begin{itemize}
+			\item 예제 코드를 보면서 \TeX 배우기 (굉장히 중요)
+		\end{itemize}
+		\vspace{1cm}
+		\item {\scriptsize \textbf{다운로드 방법} : \url{latex.gs.hs.kr} - 다운로드 - `다운로드 페이지 링크'}
+	\end{itemize}
+\end{frame}
+\begin{frame}{협회의 목적}
+	협회가 있기 전에는\ldots
+	\begin{itemize}
+		\item \TeX 의 높은 진입장벽, learning curve
+		\item R\&E 보고서 \TeX 양식의 오류
+		\begin{itemize}
+			\item 초보자는 오류를 직접 고치기 어려움
+			\item 오류를 고친다 하더라도, 공지/배포가 어려움
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\begin{frame}{협회의 목적}
+	협회를 통하여\ldots
+	\begin{itemize}
+		\item 초심자와 숙련자의 win-win
+		\begin{itemize}
+			\item 초심자 : 입문서, 워크샵을 통해 쉽게 배움
+			\item 숙련자 : 입문서 제작을 통한 정리, 추가학습
+		\end{itemize}
+		\item 오픈소스
+		\begin{itemize}
+			\item 학생/교사 모두에게 열려있는 편집 권한
+			\item 참여하는 저자에게도 큰 도움이 됨
+		\end{itemize}
+		\item 중앙집권화
+		\begin{itemize}
+			\item 빠른 오류 제보 및 처리
+			\item 홈페이지를 통한 안내
+			\item 텍 사용자간 교류(사용 팁 공유)
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+\begin{frame}{협회의 구조}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\textwidth]{gshstexsociety_structure.pdf}
 	\end{figure}
 \end{frame}
 \begin{frame}{구인 광고}
