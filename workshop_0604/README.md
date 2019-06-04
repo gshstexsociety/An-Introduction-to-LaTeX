@@ -1,7 +1,1 @@
-# LaTeX_Guide_for_Teachers
-GSHS 교사 대상 LaTeX 안내서 제작
-## figures
-
-## logo
-
-## text_article
+# 2019년 6월 4일 워크샵 강의자료
