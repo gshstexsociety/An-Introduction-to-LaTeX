@@ -1,0 +1,39 @@
+\documentclass{article}
+
+\usepackage{kotex}
+\usepackage{listings}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\begin{document}
+	
+	
+	\begin{lstlisting}[language=c++]
+#include<cstdio>
+
+int main()
+{
+	puts("hello");
+}
+	\end{lstlisting}
+	
+	\begin{tikzpicture}% function
+	\begin{axis}[xlabel=x axis label,ylabel=y axis label]
+	\addplot {x^4};
+	\end{axis}
+	\end{tikzpicture}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=.2\textwidth]{pictures/GSW_logo.jpg}
+		\caption{GSW logo}
+		\label{GSW}
+	\end{figure}
+	
+	그림 \ref{GSW} \를 보면 ...
+	
+	레퍼런스 \cite{asdfasdf}
+	\bibliographystyle{plain}
+	\bibliography{refs.bib}
+\end{document}
