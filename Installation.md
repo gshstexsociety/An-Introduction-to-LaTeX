@@ -4,7 +4,9 @@
 #### 1-1. 네트워크로 설치
  - [여기](http://mirror.navercorp.com/CTAN/systems/texlive/tlnet/install-tl-windows.exe)에서 `install-tl-windows.exe`를 다운받는다.
  - 다운받은 폴더에서 Shift+오른쪽 클릭 후 `여기에 PowerShell 창 열기`를 선택한 후, 아래 명령어를 입력한다.
- ```.\install-tl-windows.exe --repository http://mirror.navercorp.com/CTAN/systems/texlive/tlnet```
+ ```
+ .\install-tl-windows.exe --repository http://mirror.navercorp.com/CTAN/systems/texlive/tlnet
+ ```
  - 설치 과정을 진행한다.
  
 #### 1-2. ISO 파일로 설치
