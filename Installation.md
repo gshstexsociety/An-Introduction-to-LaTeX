@@ -1,34 +1,45 @@
-# LaTeX 설치 가이드 (Windows)
-## 인터넷 환경이 좋을 경우
-- [여기](https://www.tug.org/texlive/acquire-netinstall.html)에 들어가서 `install-tl-windows.exe` 를 다운받는다.
-- 실행(더블클릭)한다.
-- 설치가 완료될 때까지 기다린다.
-
-하지만 이 방법은 다운로드와 설치를 같이 하기 때문에 매우 오래 걸릴 수 있다. (>2시간)
-
-## 인터넷 환경이 나쁘거나 없을 경우
-- [여기](https://www.tug.org/texlive/acquire-iso.html)에서 `texlive2016.iso.torrent` 를 다운받는다.
-- (시간 따로 내어서 인터넷 잘되는 곳에 간 뒤) 토렌트를 통해 iso 파일(약 2GB)을 얻는다.
-  - 교내 인터넷망으로는 토렌트가 작동되지 않는다. 
-  - 따라서 **학습관 컴퓨터 바탕화면**에 있는 이 파일을 USB로 가져가면 된다.
-- iso 파일을 압축해제한 뒤 `install-tl-windows.bat` 를 찾아 실행(더블클릭)한다.
-- 설치가 완료될 때까지 기다린다. (약 50분 소요)
-- 참고 : 설치가 진행되는 중 설치하고 있는 창을 클릭하면 '응답 없음'이 뜰 수도 있다. 웬만하면 설치 중에는 컴퓨터를 아예 건드리지 말자.
-
-
-# 에디터(문서 편집기)
-## TeXstudio
+# LaTeX 및 편집 도구 설치 가이드
+## LaTeX 설치
+### 1. Windows
+#### 1-1. 네트워크로 설치
+ - [여기](http://mirror.navercorp.com/CTAN/systems/texlive/tlnet/install-tl-windows.exe)에서 `install-tl-windows.exe`를 다운받는다.
+ - 다운받은 폴더에서 Shift+오른쪽 클릭 후 `여기에 PowerShell 창 열기`를 선택한 후, 아래 명령어를 입력한다.
+ ```
+ .\install-tl-windows.exe --repository http://mirror.navercorp.com/CTAN/systems/texlive/tlnet
+ ```
+ - 설치 과정을 진행한다.
+ 
+#### 1-2. ISO 파일로 설치
+ - [네이버 미러](http://mirror.navercorp.com/CTAN/systems/texlive/Images) 또는 [박기현 선생님이 관리하시는 저장소](http://gofile.me/3SyFU/mqwExIgLI)에서 texliveXXXX-XXXXXXXX.iso 파일을 다운받는다. 다운로드한 후, 경로에 한글이나 띄어쓰기가 없는 위치(ex. C:\)에 파일을 옮긴다.
+ - iso 파일을 압축해제한 후 `install-tl-windows.bat`을 실행한다.
+ - 설치 과정을 진행한다.
+ 
+### 2. Mac
+--수정중--
+### 3. Linux
+#### 3-1. 네트워크로 설치
+ - [여기](http://mirror.navercorp.com/CTAN/systems/texlive/tlnet/install-tl)에서 `install-tl`을 다운받는다.
+ - 터미널에서 `./install-tl --repository http://mirror.navercorp.com/CTAN/systems/texlive/tlnet`을 입력한다.
+ - 설치 과정을 진행한다.
+ 
+#### 3-2. ISO 파일로 설치
+ - [네이버 미러](http://mirror.navercorp.com/CTAN/systems/texlive/Images) 또는 [박기현 선생님이 관리하시는 저장소](http://gofile.me/3SyFU/mqwExIgLI)에서 texliveXXXX-XXXXXXXX.iso 파일을 다운받는다.
+ - iso 파일을 압축해제한 후 `install-tl`을 실행한다.
+ - 설치 과정을 진행한다.
+ 
+## 에디터(문서 편집기)
+### TeXstudio
 - **강력추천**. Windows, macOS에서 모두 사용가능.
 - [TeXstudio](http://texstudio.org/) 를 다운받고 설치한다.
 
-### TeXstudio 에서 TeXlive 설치여부 확인하기
+#### TeXstudio 에서 TeXlive 설치여부 확인하기
 Help - Check LaTeX Installation
 
-## TeXworks?
+### TeXworks?
 - TeXlive 설치 시 기본으로 설치된다.
 - **비추천**. 이거 쓰면 개고생한다.
 
-# 첫 컴파일
+## 첫 컴파일
 - TeXstudio 실행
 - File-New(단축키 Ctrl+N)
 - 아래의 코드를 입력
