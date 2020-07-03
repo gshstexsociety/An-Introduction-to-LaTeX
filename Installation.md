@@ -17,12 +17,12 @@
 ### 2. Mac
 --수정중--
 ### 3. Linux
-#### 1-1. 네트워크로 설치
+#### 3-1. 네트워크로 설치
  - [여기](http://mirror.navercorp.com/CTAN/systems/texlive/tlnet/install-tl)에서 `install-tl`을 다운받는다.
  - 터미널에서 `./install-tl --repository http://mirror.navercorp.com/CTAN/systems/texlive/tlnet`을 입력한다.
  - 설치 과정을 진행한다.
  
-#### 1-2. ISO 파일로 설치
+#### 3-2. ISO 파일로 설치
  - [네이버 미러](http://mirror.navercorp.com/CTAN/systems/texlive/Images) 또는 [박기현 선생님이 관리하시는 저장소](http://gofile.me/3SyFU/mqwExIgLI)에서 texliveXXXX-XXXXXXXX.iso 파일을 다운받는다.
  - iso 파일을 압축해제한 후 `install-tl`을 실행한다.
  - 설치 과정을 진행한다.
