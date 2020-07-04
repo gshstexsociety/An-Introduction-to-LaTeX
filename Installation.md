@@ -18,8 +18,10 @@
 --수정중--
 ### 3. Linux
 #### 3-1. 네트워크로 설치
- - [여기](http://mirror.navercorp.com/CTAN/systems/texlive/tlnet/install-tl)에서 `install-tl`을 다운받는다.
- - 터미널에서 `./install-tl --repository http://mirror.navercorp.com/CTAN/systems/texlive/tlnet`을 입력한다.
+ - [여기](http://mirror.navercorp.com/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz)에서 `install-tl-unx.tar.gz`을 다운받는다.
+ - 압축을 푼 후, 터미널에서 해당 폴더로 이동 후
+ ```perl install-tl --repository http://mirror.navercorp.com/CTAN/systems/texlive/tlnet```
+ 을 입력한다. 권한 문제 발생 시 명령어 앞에 `TEXLIVE_INSTALL_PREFIX=원하는 설치 폴더 `를 붙여서 설치 폴더를 바꿔 해결한다.
  - 설치 과정을 진행한다.
  
 #### 3-2. ISO 파일로 설치
