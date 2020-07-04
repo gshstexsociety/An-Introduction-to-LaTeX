@@ -28,7 +28,11 @@
  
 #### 3-2. ISO 파일로 설치
  - [네이버 미러](http://mirror.navercorp.com/CTAN/systems/texlive/Images) 또는 [박기현 선생님이 관리하시는 저장소](http://gofile.me/3SyFU/mqwExIgLI)에서 texliveXXXX-XXXXXXXX.iso 파일을 다운받는다.
- - iso 파일을 압축해제한 후 `install-tl`을 실행한다.
+ - iso 파일을 클릭해 마운트하고(리눅스 배포판과 버전에 따라 마운트 방법이 다를 수 있음), 마운트된 위치에서 터미널을 실행하여 
+ ```
+ perl install-tl
+ ```
+ 을 입력한다. 권한 문제 발생 시 명령어 앞에 `TEXLIVE_INSTALL_PREFIX=원하는 설치 폴더 `를 붙여서 설치 폴더를 바꿔 해결한다.
  - 설치 과정을 진행한다.
  
 ## 에디터(문서 편집기)
