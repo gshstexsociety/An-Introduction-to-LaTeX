@@ -15,7 +15,13 @@
  - 설치 과정을 진행한다.
  
 ### 2. Mac
---수정중--
+#### 2-1. [Homebrew](https://brew.sh/index_ko)로 설치
+- Terminal.app을 연다.
+- `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"` 을 실행한다.
+- 중간에 설치를 진행할 것인지 물어보는데 이 때 엔터를 친다. 
+- GUI앱까지 설치하고 싶으면 `/usr/local/bin/brew cask install mactex`을 실행하고 핵심만 설치하고 싶으면 `/usr/local/bin/brew cask install mactex-no-gui`를 실행한다.
+- 중간에 암호를 물어보면 컴퓨터 루트 비번을 입력하면 된다.
+
 ### 3. Linux
 #### 3-1. 네트워크로 설치
  - [여기](http://mirror.navercorp.com/CTAN/systems/texlive/tlnet/install-tl-unx.tar.gz)에서 `install-tl-unx.tar.gz`을 다운받는다.
