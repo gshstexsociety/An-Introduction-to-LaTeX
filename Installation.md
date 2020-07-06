@@ -10,8 +10,9 @@
  - 설치 과정을 진행한다.
  
 #### 1-2. ISO 파일로 설치
- - [네이버 미러](http://mirror.navercorp.com/CTAN/systems/texlive/Images) 또는 [박기현 선생님이 관리하시는 저장소](http://gofile.me/3SyFU/mqwExIgLI)에서 texliveXXXX-XXXXXXXX.iso 파일을 다운받는다. 다운로드한 후, 경로에 한글이나 띄어쓰기가 없는 위치(ex. C:\)에 파일을 옮긴다.
- - iso 파일을 압축해제한 후 `install-tl-windows.bat`을 실행한다.
+ - [네이버 미러](http://mirror.navercorp.com/CTAN/systems/texlive/Images) 또는 [박기현 선생님이 관리하시는 저장소](http://gofile.me/3SyFU/mqwExIgLI)에서 texliveXXXX-XXXXXXXX.iso 파일을 다운받는다.
+ - iso 파일을 오른쪽 버튼으로 클릭한 후, '탑재'를 누른다.
+ - '내 PC' 아래에 새로운 디스크 드라이브가 생성된 것이 보일 것이다. 이 들라이브에 들어가서, `install-tl-windows.bat`을 실행한다.
  - 설치 과정을 진행한다.
  
 ### 2. Mac
