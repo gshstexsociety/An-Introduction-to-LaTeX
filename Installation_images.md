@@ -16,7 +16,7 @@
 - 참고 : 설치가 진행되는 중 설치하고 있는 창을 클릭하면 '응답 없음'이 뜰 수도 있다. 웬만하면 설치 중에는 컴퓨터를 아예 건드리지 말자.
 
 ## iso 직접 다운로드 하기
-- [여기](http://gofile.me/6BTTd/CQZUj9QGA)에서 'texlive2020-20200406.iso'을 직접 다운로드 한다. 
+- [네이버 미러](http://mirror.navercorp.com/CTAN/systems/texlive/Images) 또는 [박기현 선생님이 관리하시는 저장소](http://gofile.me/3SyFU/mqwExIgLI)에서 texliveXXXX-XXXXXXXX.iso 파일을 다운받는다.
 - 그리고 iso 파일을 압축해제한 뒤 위와 같이 한다.
 - 교내망에서는 이렇게 다운로드 하면 조금 편할거 같다.
 
